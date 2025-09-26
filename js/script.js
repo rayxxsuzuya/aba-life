@@ -243,7 +243,7 @@ for (let i = 0; i < acc.length; i++) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.second-button');
+  const buttons = document.querySelectorAll('[data-modal]');
 
   buttons.forEach(btn => {
     btn.addEventListener('click', (e) => {
