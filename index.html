@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная страница</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="firstModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="32" height="32" alt="Закрыть">
+      </button>
+      <h2 class="fillform__title">Заполните форму</h2>
+      <p class="fillform__subtitle">Наш менеджер свяжется с вами в ближайшее время. Мы ответим на вопросы и
+        расскажем, как можем помочь именно вам.</p>
+      <form class="hero__form second" action="/">
+        <div class="hero__main">
+          <input class="hero__input" type="text" placeholder="Имя">
+          <input class="hero__input" type="text" placeholder="Номер телефона">
+
+        </div>
+        <label class="hero__label">
+          <input class="hero__checkbox" type="checkbox" required checked>
+          Даю согласие на обработку <a class="hero__politic" href="#">персональных данных</a>
+        </label>
+        <button class="main-button second" type="submit">
+          Записаться
+          <span class="main-button__arrow">
+            <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+          </span>
+        </button>
+      </form>
+    </div>
+
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window first" id="secondModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="32" height="32" alt="Закрыть">
+      </button>
+      <h2 class="modal__caption">Записаться на консультацию с терапевтом</h2>
+      <form class="hero__form second" action="/">
+        <div class="hero__main">
+          <input class="hero__input" type="text" placeholder="Имя">
+          <input class="hero__input" type="text" placeholder="Номер телефона">
+
+        </div>
+        <label class="hero__label">
+          <input class="hero__checkbox" type="checkbox" required checked>
+          Даю согласие на обработку <a class="hero__politic" href="#">персональных данных</a>
+        </label>
+        <button class="main-button second" type="submit">
+          Записаться
+          <span class="main-button__arrow">
+            <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal__bg"></div>
+    <div class="modal__window third" id="successModal">
+      <button class="modal__close">
+        <img class="modal__icon" src="img/icons/close.svg" width="32" height="32" alt="Закрыть">
+      </button>
+      <div class="modal-success">
+        <img class="modal-success__icon" src="img/icons/modal-ok.svg" width="107" height="106" alt="Иконка">
+        <h3 class="modal-success__caption">Спасибо</h3>
+        <p class="modal-success__accept">Ваша заявка на консультацию принята!</p>
+        <p class="modal-success__specs">Наш специалист свяжется с вами в ближайшее время для уточнения деталей. </p>
+        <p class="modal-success__bottom">А пока мы хотим вам продемострировать работу нашего AI терапевта, он сможет
+          подобрать для вас программу на 3 недели совершенно бесплатно!</p>
+      </div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container">
+      <div class="header__global">
+        <div class="header__notice">
+          <button class="header__close">
+            <img class="header__cross" src="img/icons/close.svg" width="32" height="32" alt="Закрыть">
+          </button>
+          <div class="header__flex">
+            <p class="header__text">Получить программу развития на 3 недели от AI- терапевта <b>бесплатно!</b></p>
+            <a class="second-button" href="https://t.me/aba_life_bot" target="_blank">Получить</a>
+          </div>
+        </div>
+        <div class="header__wrapper">
+          <a class="header__logo" href="/">
+            <img class="header__icon" src="img/logo.png" width="114" height="123" alt="Логотип">
+            <span class="header__span">aba.life</span>
+          </a>
+          <nav class="header__nav">
+            <a class="header__link" href="./#why">Почему мы?</a>
+            <a class="header__link" href="./#program">Программа</a>
+            <a class="header__link" href="./reviews.html">Отзывы</a>
+            <a class="header__link" href="./#price">Цена</a>
+            <a class="header__link" href="./#test">Пройти тест</a>
+          </nav>
+          <a class="second-button second" href="#" target="_blank" data-modal="firstModal">Записаться</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__global">
+        <h1 class="hero__title">Не откладывайте будущее ребёнка на потом —начните создавать его сейчас</h1>
+        <p class="hero__subtitle">Для детей 3-8 лет: индивидуальная коррекция речи, поведения и адаптация к миру от
+          онлайн центра коррекции ABA.LIFE с командой лучших ВСВА специалистов СНГ</p>
+        <div class="hero__bottom">
+          <form class="hero__form" action="/">
+            <div class="hero__main">
+              <input class="hero__input" type="text" placeholder="Имя">
+              <input class="hero__input" type="text" placeholder="Номер телефона">
+              <button class="main-button" type="submit">
+                Бесплатная консультация
+                <span class="main-button__arrow">
+                  <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+                </span>
+              </button>
+            </div>
+            <label class="hero__label">
+              <input class="hero__checkbox" type="checkbox" required checked>
+              Даю согласие на обработку <a class="hero__politic" href="#">персональных данных</a>
+            </label>
+          </form>
+          <img class="hero__image" src="img/hero-image.png" width="755" height="503" loading="lazy" alt="Картинка">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="help">
+    <div class="container">
+      <div class="help__block">
+        <img class="help__image" src="img/help-image.png" width="249" height="266" loading="lazy" alt="Картинка">
+        <div class="help__wrapper">
+          <h2 class="help__title">Мы понимаем как вы устали.</h2>
+          <p class="help__subtitle">Постоянные занятия,<br> а прогресс едва заметен?</p>
+          <a class="main-button" href="#">
+            Мы поможем
+            <span class="main-button__arrow">
+              <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="video">
+    <div class="container">
+      <video class="video__player" src="video/main-video.mp4" width="1276" height="671" loading="lazy" controls></video>
+    </div>
+  </section>
+  <div class="blue-first">
+    <section class="steps">
+      <div class="container">
+        <div class="steps__global">
+          <div class="steps__left">
+            <h2 class="steps__title">Всего 4 шага к устойчивому прогрессу</h2>
+            <a class="main-button" href="#">
+              Бесплатная консультация
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </a>
+          </div>
+          <div class="steps__block">
+            <div class="steps__item">
+              <h3 class="steps__caption">Онлайн-консультация</h3>
+              <p class="steps__text">Знакомимся, отвечаем на вопросы, собираем первичные данные.</p>
+            </div>
+            <div class="steps__item">
+              <h3 class="steps__caption">Диагностика и анализ</h3>
+              <p class="steps__text">Глубокая диагностика личностных, познавательных и коммуникативных навыков ребёнка.
+                В сопровождении с профессиональными специалистами и нашим обученным искусственным интеллектом.</p>
+            </div>
+            <div class="steps__item">
+              <h3 class="steps__caption">Персональная программа</h3>
+              <p class="steps__text">Вы получаете детальный план развития с измеримыми целями на 3, 6 и 12 месяцев. С
+                постоянной дороботкой под особенности вашего малыша. </p>
+            </div>
+            <div class="steps__item">
+              <h3 class="steps__caption">Занятия и поддержка</h3>
+              <p class="steps__text">Все занятия проходят онлайн по гибкому расписанию, удобному для вас, в
+                сопровождении наших профессиональных специалистов с постоянной поддержкой. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="who">
+      <div class="container">
+        <h2 class="who__title">Кому подойдёт программа?</h2>
+        <p class="who__subtitle">Программа будет полезна, если у вашего ребенка:</p>
+        <div class="who__block">
+          <div class="who__item">
+            <h3 class="who__caption">Необычное поведение</h3>
+            <p class="who__subcuption">Рекомендуем детям от 3 до 8 лет</p>
+            <img class="who__image" src="img/who-1.jpg" width="568" height="377" loading="lazy" alt="Картинка">
+            <ul class="who__list">
+              <li class="who__point">С трудом контактирует с окружающим миром: боится новых мест или незнакомых людей;
+              </li>
+              <li class="who__point">Развитие речи и моторики не соотвествует возрасту;</li>
+              <li class="who__point">Нет телесного контакта, не обнимает и не целует родителей;</li>
+              <li class="who__point">Трудно привлечь внимание малыша: не смотрит в глаза “не слышит” и не слушает;</li>
+              <li class="who__point">Нет навыков самообслуживания;</li>
+              <li class="who__point">Частые “беспричинные” истерики и вспышки агрессии;</li>
+              <li class="who__point">Поведение в форме ритуальных, повторяющихся стереотипных влечений и действий: одни
+                и те же звуки, слова, фразы, трение об пол, не отрываясь смотрит на свет, раскачивается всем телом и др;
+              </li>
+              <li class="who__point">Проблемы со сном и прочее необычное поведение</li>
+            </ul>
+          </div>
+          <div class="who__item">
+            <h3 class="who__caption">Поставленный диагноз</h3>
+            <p class="who__subcuption">Рекомендуем детям от 3 до 8 лет</p>
+            <img class="who__image" src="img/who-2.jpg" width="568" height="560" loading="lazy" alt="Картинка">
+            <ul class="who__list">
+              <li class="who__point">Задержка/нарушение эмоционально-коммуникативного развития;</li>
+              <li class="who__point">Задержка психоречевого развития с аутистическими чертами (ЗПРР с АЧ);</li>
+              <li class="who__point">Расстройства аутистического спектра (РАС);</li>
+              <li class="who__point">Синдром Аспергера, ИН(УО), СДВГ, ЗРР, ЗПР, ОНР, ТНР, алалия, особенности поведения,
+                и другие нарушения развития</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="program" id="program">
+    <div class="container">
+      <h2 class="program__title">Программа</h2>
+      <div class="program__pills">
+        <div class="program__pill">5 модулей</div>
+        <div class="program__pill">Индивидуальный подход</div>
+        <div class="program__pill">AI помощник</div>
+      </div>
+      <h3 class="program__heading">О коррекционной программе:</h3>
+      <ul class="program__list">
+        <li class="program__point">
+          <div class="program__square">
+            <img class="program__icon" src="img/icons/program-1.svg" width="20" height="20" alt="Иконка">
+          </div>
+          Используем в работе только методы с доказанной эффективностью
+        </li>
+        <li class="program__point">
+          <div class="program__square">
+            <img class="program__icon" src="img/icons/program-2.svg" width="20" height="20" alt="Иконка">
+          </div>
+          Документальное сопровождение процесса
+        </li>
+        <li class="program__point">
+          <div class="program__square">
+            <img class="program__icon" src="img/icons/program-3.svg" width="20" height="20" alt="Иконка">
+          </div>
+          Родители являются активными участниками программы
+        </li>
+        <li class="program__point">
+          <div class="program__square">
+            <img class="program__icon" src="img/icons/program-4.svg" width="20" height="20" alt="Иконка">
+          </div>
+          Осуществление выбора приемов в соотвествии с индивидуальными особенностями ребенка
+        </li>
+        <li class="program__point">
+          <div class="program__square">
+            <img class="program__icon" src="img/icons/program-5.svg" width="20" height="20" alt="Иконка">
+          </div>
+          Обеспечение преемственности в работе смежных специалистов в рамках одного кейса
+        </li>
+        <li class="program__point">
+          <div class="program__square">
+            <img class="program__icon" src="img/icons/program-6.svg" width="22" height="22" alt="Иконка">
+          </div>
+          Непрерывное обучение специалистов
+        </li>
+      </ul>
+      <div class="program__blue">
+        <div class="program__tabs tabs">
+          <a class="program__tab tab active" href="#">Модуль 1</a>
+          <a class="program__tab tab" href="#">Модуль 2</a>
+          <a class="program__tab tab" href="#">Модуль 3</a>
+          <a class="program__tab tab" href="#">Модуль 4</a>
+          <a class="program__tab tab" href="#">Модуль 5</a>
+        </div>
+        <div class="program__contents contents">
+          <div class="program__content content active">
+            <div class="program__wrapper">
+              <h4 class="program__caption">Раздел «Коммуникация» </h4>
+              <p class="program__description">Развитие коммуникации у детей с аутизмом – это приоритетная задача,
+                требующая комплексного и индивидуального подхода. Коммуникация не ограничивается только вербальной
+                речью; она включает в себя любой способ, которым ребенок выражает свои мысли, чувства, потребности и
+                желания. Важно помнить, что каждый ребенок уникален, и стратегии, эффективные для одного ребенка, могут
+                не подойти другому. При построении вмешательства важны следующие составляющие: индивидуализация,
+                положительное подкрепление, визуальная поддержка, структурированная среда, функциональность, командная
+                работа, терпение и последовательность.</p>
+            </div>
+          </div>
+          <div class="program__content content">
+            <div class="program__wrapper">
+              <h4 class="program__caption">Модуль «Речь»</h4>
+              <p class="program__description">Развитие речи у дошкольников с особенностями развития –
+                комплексная и многоаспектная задача, требующая индивидуального
+                подхода, высокого уровня профессионализма специалиста, который располагает
+                теоретическими знаниями и массивной практикой. Учет
+                причин речевых нарушений, их совокупности, сопутствующих проблем и
+                потенциальных возможностей каждого ребенка обязательные
+                составляющие построения эффективного вмешательства. Наши специалисты
+                анализируют актуальный уровень развития, открыто сообщают о
+                необходимости введения альтернативной (дополнительной) коммуникации,
+                сопровождают процесс выбора, введения и развития АДК.</p>
+            </div>
+          </div>
+          <div class="program__content content">
+            <div class="program__wrapper">
+              <h4 class="program__caption">Модуль «Самообслуживание»</h4>
+              <p class="program__description">Развитие навыков самообслуживания у дошкольников
+                с аутизмом - важная часть их интеграции в общество и
+                повышения самостоятельности. Это процесс, требующий терпения,
+                последовательности и индивидуального подхода. Важно помнить, что у
+                детей с нарушениями развития могут быть сенсорные особенности, трудности с
+                пониманием инструкций и проблемы с моторной координацией,
+                что может затруднять освоение этих навыков. Мы поможем найти причину проблемы и
+                построим индивидуальную и бережную программу.Очень важно научить ребенка
+                спокойно стричь ногти и волосы, принимать ванну, чистить зубы, менять грязную
+                одежду. Важно, потому что
+                отсутствие навыков соблюдения гигиены несет угрозу здоровью ребенка, нарушение
+                социализации.</p>
+            </div>
+          </div>
+          <div class="program__content content">
+            <div class="program__wrapper">
+              <h4 class="program__caption">Модуль «Игра»</h4>
+              <p class="program__description">Обучение игре – это цель, которую часто упускают при разработке
+                вмешательства для детей с особенностями развития.
+                Отсутствие данного навыка является самой распространенной преградой для
+                развития дошкольников с особенностями развития.
+                Формирование игровой деятельности одно из сложных и ресурсозатратных
+                направлений. В результате диагностики у большинства детей с
+                различными видами нарушений этот навык показывает самые низкие результаты. Мы
+                понимаем, что игра, это не просто фундамент обучения и
+                социализации, но и самостоятельный досуг. Ребенок, который не может организовать
+                свое свободное время, испытывает чувство тревожности
+                и дискомфорта, требует сладости, демонстрирует аутостимулятивное поведение. В
+                такой ситуации родители постоянно должны придумывать
+                чем занять ребенка, чтобы он не махал руками, не бегал кругами, не злоупотреблял
+                вредной пищей. Игра для таких детей может быть не только
+                способом развлечения, но и мощным инструментом для обучения и коррекции. Важно
+                помнить, что игра детей с особенностями развития может
+                отличаться от игры типично развивающихся сверстников. Она может быть более
+                стереотипной, менее спонтанной и социальной. Поэтому
+                обучение игре требует специального подхода, терпения и понимания.</p>
+            </div>
+          </div>
+          <div class="program__content content">
+            <div class="program__wrapper">
+              <h4 class="program__caption">Модуль «Продвинутые речевые навыки»</h4>
+              <p class="program__description">Данный блок предполагает развитие
+                применения сложных когнитивных навыков.
+                Применение полученных ранее знаний в новых ситуациях,
+                комбинирование их, оценивание успешности результата
+                позволяют детям быть максимально успешными в разных сферах
+                жизнедеятельности. Мы обучаем оперировать
+                абстрактными понятиями, теми, которые не требуют физических
+                доказательств, подвергаются “обработке” приватно и
+                позволяют на их основании выстроить свои поведенческие реакции.
+                Простыми словами - мы учим ребенка учиться!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="program__bottom">
+        <div class="program__left">
+          <p class="program__inner">Родители – самые первые и главные учителя. Доверие и любовь являются фундаментом для
+            раскрытия потенциала любого ребенка. Именно поэтому наша программа построена на сотрудничестве родителей и
+            специалистов. Педагоги проекта станут проводниками для вас в особенное детство, а вы откроете для детей мир
+            общения, игры и занимательного обучения.</p>
+        </div>
+        <img class="program__right" src="img/program-image.jpg" width="648" height="202" loading="lazy" alt="Картинка">
+      </div>
+    </div>
+  </section>
+  <section class="effective">
+    <div class="container">
+      <h2 class="effective__title">Почему занятия дома – эффективно?</h2>
+      <div class="effective__block">
+        <div class="effective__item"><span class="effective__inner">Вы экономите время длительные поездки к
+            специалистам.</span></div>
+        <div class="effective__item"><span class="effective__inner">Вы сами можете выбирать время для занятий
+            ориентируясь на свои возможности,
+            состояние и настроение ребенка.</span></div>
+        <div class="effective__item"><span class="effective__inner">Вы будете проводить обучение в естественных
+            условиях, с реальными предметами
+            обихода.</span></div>
+        <div class="effective__item long"><span class="effective__inner">Ваши близкие люди, которые участвуют в
+            воспитании ребенка:
+            бабушки и дедушки, братья и сестры, няни, смогут наблюдать за процессом и также станут активными
+            помощниками.</span>
+        </div>
+        <div class="effective__item long"><span class="effective__inner">Не формируется «кабинетный навык», когда
+            ребенок демонстрирует то, чему научился
+            только с одним специалистом и никак не использует это в повседневной жизни. </span></div>
+      </div>
+    </div>
+  </section>
+  <section class="fillform">
+    <div class="container">
+      <div class="fillform__block">
+        <img class="fillform__image" src="img/fillform-image.jpg" width="648" height="455" loading="lazy"
+          alt="Картинка">
+        <div class="fillform__main">
+          <h2 class="fillform__title">Заполните форму</h2>
+          <p class="fillform__subtitle">Наш менеджер свяжется с вами в ближайшее время. Мы ответим на вопросы и
+            расскажем, как можем помочь именно вам.</p>
+          <form class="hero__form second" action="/">
+            <div class="hero__main">
+              <input class="hero__input" type="text" placeholder="Имя">
+              <input class="hero__input" type="text" placeholder="Номер телефона">
+
+            </div>
+            <label class="hero__label">
+              <input class="hero__checkbox" type="checkbox" required checked>
+              Даю согласие на обработку <a class="hero__politic" href="#">персональных данных</a>
+            </label>
+            <button class="main-button second" type="submit">
+              Записаться
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="why" id="why">
+    <div class="container">
+      <div class="why__block">
+        <div class="why__first">
+          <h2 class="why__title">Почему наша система работает</h2>
+        </div>
+        <div class="why__item">
+          <h3 class="why__caption">Родитель-проводник. Естественная среда</h3>
+          <p class="why__text">Именно связь родителя и ребёнка позволяют получить выдающиеся результаты. Как любой
+            ребёнок, дети с РАС учатся базовым навыкам наблюдая и повторяя за родителями. К тому же, ребенок находится в
+            своей естественной среде обитания, что не создает для ребенка “кабинетного” навыка.</p>
+        </div>
+        <div class="why__item">
+          <h3 class="why__caption">Работа с истоками проявлений</h3>
+          <p class="why__text">Мы работаем с тем, что лежит в основе особенностей ребёнка: помогаем ему лучше понимать
+            себя и мир, учим выражать эмоции и взаимодействовать. Благодаря этому поведенческие трудности не нарастают,
+            а постепенно уходят.</p>
+        </div>
+        <div class="why__item">
+          <h3 class="why__caption">Психолого-педагогическая коррекция</h3>
+          <p class="why__text">РАС - это поведенческое нарушение, поэтому, согласно лучшей мировой практике,
+            результативна только психолого-педагогическая коррекция. Мы не применяем медикаментозное лечение, физические
+            терапии или диеты для коррекции РАС. Наша программа разрабатывается согласно всем IEP стандартам.</p>
+        </div>
+        <div class="why__item">
+          <h3 class="why__caption">Экологичное развитие. Личный трекер.</h3>
+          <p class="why__text">С первых месяцев жизни ребёнок проходит важные этапы развития. На поведенческой игровой
+            терапии мы воссоздаём эти этапы в игровой форме, помогая ребёнку прожить их заново и укрепить
+            фундаментальные навыки. Такой подход стимулирует естественное, заложенное природой развитие психических
+            процессов и поддерживает гармоничное взросление. Также у каждой семьи мы внедряем личный трекер развития,
+            чтобы эффективно отслеживать прогресс и эффективность программы</p>
+        </div>
+        <div class="why__item">
+          <h3 class="why__caption">Специалисты. Возможность работы из любой точки мира</h3>
+          <p class="why__text">У нас лучшие специалисты, сертифицированы по международным стандартам (BCBA, RBT) и имеют
+            не менее 10 лет опыта работы с детьми с РАС. Также постоянная супервизия от ведущих экспертов из Европы и
+            США.  Мы работаем по проверенным методикам ABA, DIR/Floortime, PECS. Также проводим постоянный апгрейд
+            программ на основе мировой научной литературы и собственного отдела R&D. Также наши занятия доступны из
+            любой точки мира</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="never">
+    <div class="container">
+      <h2 class="never__title">Никогда не оставайтесь один на один с вопросом о развитии ребенка.</h2>
+      <p class="never__subtitle">Вам больше не нужно ждать утра или записи к специалисту, чтобы получить совет. Наш
+        ИИ-ассистент — это как ваш личный супер-наставник по по особенностям развития, который всегда в вашем телефоне.
+      </p>
+      <div class="never__main">
+        <img class="never__image" src="img/never-image.jpg" width="1061" height="670" loading="lazy" alt="Картинка">
+        <div class="never__cursor">
+          <img class="never__arrow" src="img/icons/never-arrow.svg" width="89" height="114" alt="Направление">
+          <span class="never__label">Используйте бесплатно!</span>
+        </div>
+      </div>
+      <div class="never__bottom">
+        <div class="never__left">
+          <p class="never__inner">
+            Он задаст правильные вопросы, чтобы понять вашу ситуацию, и предложит решение на основе доказательных
+            методик. <br><br>
+            <span class="never__bold">Загрузите протокол занятия — и получите обратную связь мгновенно.</span>
+          </p>
+        </div>
+        <div class="never__right">
+          <p class="never__text">Получите бесплатную программу развития на 3 месяца и мгновенные ответы на ваши вопросы
+            24/7.</p>
+          <a class="second-button" href="#" target="_blank">Получить</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="consultation">
+    <div class="container">
+      <div class="consultation__block">
+        <form class="hero__form" action="/">
+          <div class="hero__main">
+            <input class="hero__input" type="text" placeholder="Имя">
+            <input class="hero__input" type="text" placeholder="Номер телефона">
+            <button class="main-button" type="submit">
+              Бесплатная консультация
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </button>
+          </div>
+          <label class="hero__label">
+            <input class="hero__checkbox" type="checkbox" required checked>
+            Даю согласие на обработку <a class="hero__politic" href="#">персональных данных</a>
+          </label>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="experts">
+    <div class="container">
+      <div class="experts__top">
+        <h2 class="experts__title">Вашу программу курируют сильнейшие эксперты СНГ в области РАС</h2>
+        <div class="slider-arrows">
+          <button class="slider-arrow prev">
+            <img class="experts__icon" src="img/icons/arrow-left.svg" width="29" height="28" alt="Пред">
+          </button>
+          <button class="slider-arrow next">
+            <img class="experts__icon" src="img/icons/arrow-right.svg" width="29" height="28" alt="След">
+          </button>
+        </div>
+      </div>
+      <div class="swiper experts__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide experts__slide">
+            <img class="experts__image" src="img/experts-1.jpg" width="353" height="282" loading="lazy" alt="Картинка">
+            <h3 class="experts__name">Александр Петрович Сафронов</h3>
+            <p class="experts__post">Автор практических курсов по развитию критического мышления и наставничеству.</p>
+            <ul class="experts__list">
+              <li class="experts__point">15 лет в образовании</li>
+              <li class="experts__point">обучено 1200+ детей</li>
+              <li class="experts__point">Проверяет программы и сопровождает кураторов на всех этапах</li>
+            </ul>
+            <a class="main-button second main-button__full" href="#">
+              Подробнее
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </a>
+          </div>
+          <div class="swiper-slide experts__slide">
+            <img class="experts__image" src="img/experts-2.jpg" width="353" height="282" loading="lazy" alt="Картинка">
+            <h3 class="experts__name">Екатерина Владимировна Орлова</h3>
+            <p class="experts__post">Эксперт в области дошкольного образования. Разрабатывает траектории развития с
+              учётом особенностей обучения.</p>
+            <ul class="experts__list">
+              <li class="experts__point">12 лет в образовании</li>
+              <li class="experts__point">обучено 950 детей</li>
+              <li class="experts__point">Помогает кураторам подстраивать программу под уникальные способности ребёнка
+              </li>
+            </ul>
+            <a class="main-button second main-button__full" href="#">
+              Подробнее
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </a>
+          </div>
+          <div class="swiper-slide experts__slide">
+            <img class="experts__image" src="img/experts-3.jpg" width="353" height="282" loading="lazy" alt="Картинка">
+            <h3 class="experts__name">Сергей Николаевич Белоусов</h3>
+            <p class="experts__post">Супервизор в области проектного и инженерного образования. Разработал десятки
+              курсов.</p>
+            <ul class="experts__list">
+              <li class="experts__point">8 лет в образовании</li>
+              <li class="experts__point">обучено 400+ детей</li>
+              <li class="experts__point">Сопровождает педагогов в проектной деятельности и внедрении цифровых
+                инструментов</li>
+            </ul>
+            <a class="main-button second main-button__full" href="#">
+              Подробнее
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </a>
+          </div>
+          <div class="swiper-slide experts__slide">
+            <img class="experts__image" src="img/experts-1.jpg" width="353" height="282" loading="lazy" alt="Картинка">
+            <h3 class="experts__name">Александр Петрович Сафронов</h3>
+            <p class="experts__post">Автор практических курсов по развитию критического мышления и наставничеству.</p>
+            <ul class="experts__list">
+              <li class="experts__point">15 лет в образовании</li>
+              <li class="experts__point">обучено 1200+ детей</li>
+              <li class="experts__point">Проверяет программы и сопровождает кураторов на всех этапах</li>
+            </ul>
+            <a class="main-button second main-button__full" href="#">
+              Подробнее
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews__block">
+        <div class="reviews__left">
+          <h2 class="reviews__title">Отзывы родителей о нашей работе</h2>
+          <p class="reviews__subtitle">Реальные истории успеха: как поведенческий подход меняет жизнь детей</p>
+          <a class="main-button third" href="#">
+            Смотреть больше
+            <span class="main-button__arrow">
+              <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+            </span>
+          </a>
+        </div>
+        <div class="reviews__right">
+          <div class="swiper reviews__slider">
+            <div class="swiper-wrapper">
+              <a class="reviews__slide swiper-slide" href="img/reviews-1.jpg" data-fancybox="gallery-reviews">
+                <img class="reviews__image" src="img/reviews-1.jpg" width="362" height="375" loading="lazy" alt="Отзыв">
+              </a>
+              <a class="reviews__slide swiper-slide" href="img/reviews-2.jpg" data-fancybox="gallery-reviews">
+                <img class="reviews__image" src="img/reviews-2.jpg" width="362" height="375" loading="lazy" alt="Отзыв">
+              </a>
+              <a class="reviews__slide swiper-slide" href="img/reviews-1.jpg" data-fancybox="gallery-reviews">
+                <img class="reviews__image" src="img/reviews-1.jpg" width="362" height="375" loading="lazy" alt="Отзыв">
+              </a>
+              <a class="reviews__slide swiper-slide" href="img/reviews-2.jpg" data-fancybox="gallery-reviews">
+                <img class="reviews__image" src="img/reviews-2.jpg" width="362" height="375" loading="lazy" alt="Отзыв">
+              </a>
+              <a class="reviews__slide swiper-slide" href="img/reviews-2.jpg" data-fancybox="gallery-reviews">
+                <img class="reviews__image" src="img/reviews-2.jpg" width="362" height="375" loading="lazy" alt="Отзыв">
+              </a>
+              <a class="reviews__slide swiper-slide" href="img/reviews-2.jpg" data-fancybox="gallery-reviews">
+                <img class="reviews__image" src="img/reviews-2.jpg" width="362" height="375" loading="lazy" alt="Отзыв">
+              </a>
+            </div>
+            <div class="combined-pagination">
+              <div class="slider-arrows">
+                <button class="slider-arrow prev">
+                  <img class="slider-arrow__icon" src="img/icons/arrow-left.svg" width="29" height="28" alt="Пред">
+                </button>
+                <button class="slider-arrow next">
+                  <img class="slider-arrow__icon" src="img/icons/arrow-right.svg" width="29" height="28" alt="След">
+                </button>
+              </div>
+              <div class="fraction-pagination">
+                <span class="current-slide" id="currentSlide">1</span> / <span id="totalSlides">5</span>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="price" id="price">
+    <div class="container">
+      <h2 class="price__title">Консультации под ваши запросы</h2>
+      <p class="price__subtitle">Выберете консультацию под свои задачи. На всех этапах вас сопровождает опытный куратор.
+      </p>
+      <div class="price__block">
+        <div class="price__item">
+          <h3 class="price__caption">Базовая консультация</h3>
+          <ul class="price__list">
+            <li class="price__point">Консультацию проводит куратор</li>
+            <li class="price__point">Заключение предоставляется в устном виде</li>
+            <li class="price__point">Изучается информация только на бумажных носителях (протоколы, заявленияи тд)</li>
+            <li class="price__point">Проходит 45 минут</li>
+          </ul>
+          <div class="price__bottom">
+            <div class="price__price">2 500 рублей</div>
+            <a class="main-button second" href="#">
+              Записаться
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="price__item">
+          <h3 class="price__caption">Углубленная консультация</h3>
+          <ul class="price__list">
+            <li class="price__point">Консультацию проводит супервизор</li>
+            <li class="price__point">Изучается ифнормация по предоставленным видеоматериалам (по запросукуратора), на
+              бумажных носителях</li>
+            <li class="price__point">Заключение предоставляется в письменном виде (пример) после проверки супервизора
+            </li>
+            <li class="price__point">Проходит 60 минут </li>
+          </ul>
+          <div class="price__bottom">
+            <div class="price__price">4 000 рублей</div>
+            <a class="main-button second" href="#">
+              Записаться
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cost">
+    <div class="container">
+      <div class="cost__block">
+        <div class="cost__left">
+          <h2 class="cost__title">Стоимость и сроки обучения</h2>
+          <p class="cost__subtitle">Не позволяйте еще одному важному месяцу ускользнуть.</p>
+          <div class="cost__main">
+            <div class="cost__top">
+              <p class="cost__price">69 000 рублей / месяц</p>
+              <div class="cost__align">
+                <a class="main-button third" href="#">
+                  Оставить заявку
+                  <span class="main-button__arrow">
+                    <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="cost__bottom">
+              <h3 class="cost__caption">Вы получаете полноценный комплекс по сопровождению ребенка:</h3>
+              <ul class="cost__list">
+                <li class="cost__point">8 индивидуальных занятий с куратором</li>
+                <li class="cost__point">Индивидуальная программа</li>
+                <li class="cost__point">Полная поддержка супервизором куратора каждое 2е занятие</li>
+                <li class="cost__point">Групповые встречи в формате вопрос-ответ с экспертами в разных областях</li>
+                <li class="cost__point">Теоретический компонент по теме в виде лекций и вебинаров</li>
+                <li class="cost__point">Видео уроки с пошаговыми инструкциями применения на практике полученных знаний
+                </li>
+                <li class="cost__point">Подробные индивидуальные планы занятий дома</li>
+                <li class="cost__point">Перечень материалов для занятий, которые вы легко освоите в привычной домашней
+                  обстановке</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <img class="cost__image" src="img/cost-image.png" width="488" height="876" loading="lazy" alt="Картинка">
+      </div>
+    </div>
+  </section>
+  <section class="test" id="test">
+    <div class="container">
+      <div class="test__start">
+        <h2 class="test__title">Если вы только предполагаете, что столкнулись с ситуацией пройдите, пожалуйста, тест,
+          который позволит определить риск аутизма у ребенка в возрасте 16-30 месяцев.</h2>
+        <p class="test__subtitle">Он состоит из 20 вопросов для родителей. Обычно ответы на вопросы занимают несколько
+          минут.</p>
+        <div class="test__align">
+          <button class="main-button" id="openTest">
+            Пройти тест
+            <span class="main-button__arrow">
+              <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="testing">
+        <div class="container">
+          <div class="testing__counter"><span class="testing__now">3</span> из <span class="testing__all">20</span>
+          </div>
+          <p class="testing__notion">Пожалуйста, ответьте на следующие вопросы о вашем ребенке. Подумайте о том, как
+            обычно ведет себя ребенок. Если вы наблюдали подобное поведение у ребенка несколько раз, но обычно он/она
+            так себя не ведет, то, пожалуйста, отвечайте «нет»</p>
+          <div class="swiper testing__slider">
+            <div class="swiper-wrapper">
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Если вы указываете пальцем на что-то в другом конце комнаты, ваш ребенок
+                  на это смотрит?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Если вы указываете пальцем
+                  на игрушку или животное, ребенок посмотрит на игрушку или животное</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Вы когда-нибудь предполагали, что ваш ребенок может быть глухим?</h3>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ваш ребенок играет в воображаемые или сюжетно-ролевые игры?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Ребенок притворяется, что пьет из
+                  пустой чашки, делает вид, что говорит по телефону, понарошку кормит куклу или плюшевую игрушку</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенку нравится забираться на различные предметы?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Ребенок любит залезать на мебель,
+                  на оборудование детской площадки</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ваш ребенок делает необычные движения пальцами перед глазами?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Ребенок перебирает пальцами около
+                  глаз</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок указывает пальцем, чтобы что-то попросить или получить помощь?
+                </h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Ребенок указывает пальцем на
+                  лакомство или игрушку, до которой не может дотянуться</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок указывает пальцем, чтобы обратить внимание на что-то интересное?
+                </h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Ребенок показывает пальцем на
+                  самолет в небе или на большой грузовик на дороге</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок интересуется другими детьми?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Ребенок наблюдает за другими
+                  детьми, улыбается им, идет к ним</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок приносит предметы и поднимает их, чтобы показать вам?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Ребенок показывает вам цветок,
+                  плюшевую игрушку или машинку</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок отзывается на свое имя?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Он или она смотрит на вас,
+                  говорит или лепечет, прекращает то, что сейчас делает, когда вы зовете его или ее по имени</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Когда вы улыбаетесь ребенку, он или она улыбается в ответ?</h3>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенка расстраивают обычные звуки?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Ребенок начинает кричать или
+                  плакать от таких звуков, как шум пылесоса или громкая музыка</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок ходит?</h3>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок смотрит вам в глаза, когда вы говорите с ним, играете или
+                  одеваете?</h3>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок пытается копировать то, что вы делаете?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Машет рукой в ответ, когда вы
+                  прощаетесь, хлопает в ладоши, издает смешные звуки</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Если вы обернетесь и посмотрите на что-нибудь, ваш ребенок обернется,
+                  чтобы увидеть, на что вы смотрите?</h3>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок старается сделать так, чтобы вы посмотрели на него?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Ребенок смотрит на вас, ожидая
+                  похвалу, или говорит «гляди» или «посмотри на меня»</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Ребенок понимает то, что вы говорите ему или ей?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Если вы не будете ничего
+                  показывать руками, ребенок поймет такие фразы как «положи книжку на стул» или «принеси мне одеяло»</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Когда случается что-то необычное, ребенок смотрит на ваше лицо, чтобы
+                  понять, как вы к этому относитесь?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Если ребенок слышит странный или
+                  непривычный звук или видит новую игрушку, он или она смотрит на ваше лицо</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+              <div class="testing__slide swiper-slide">
+                <h3 class="testing__question">Вашему ребенку нравятся подвижные занятия?</h3>
+                <p class="testing__example"><span class="testing__bold">Пример:</span> Когда ребенок подпрыгивает у вас
+                  на коленях или когда его раскачивают на качелях</p>
+                <div class="testing__action">
+                  <button class="testing__choose yes">Да</button>
+                  <button class="testing__choose no">Нет</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination testing__pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="testing-end">
+        <div class="container">
+          <h3 class="testing-end__title">Высокий риск</h3>
+          <p class="testing-end__text">Необходимо провести обследование ребенка у специалиста, имеющего опыт в
+            диагностике аутизма, а также обратиться за психолого-педагогической помощью для ребенка.</p>
+          <div class="testing-end__align">
+            <a class="main-button" href="#">
+              Записаться на консультацию
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </a>
+          </div>
+          <a class="testing-end__print" href="#">
+            <img src="img/icons/print.svg" width="24" height="24" alt="Распечатать">
+            Распечатать тест
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="faq">
+    <div class="container">
+      <h2 class="faq__title">Частые вопросы</h2>
+      <div class="faq__global">
+        <div class="faq__wrapper">
+          <div class="faq__item">
+            <button class="accordion"><span class="faq__inner">Я слышал/а, что коррекция может быть стрессовой для
+                ребенка, так ли это? </span> <span class="faq__square"><img class="faq__arrow"
+                  src="img/icons/arrow-down.svg" width="29" height="28" alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="accordion"><span class="faq__inner">У нас в семье есть режим и, возможно, я не смогу
+                участвовать во всех онлайн-встречах коррекционной программы. Как мне быть?</span> <span
+                class="faq__square"><img class="faq__arrow" src="img/icons/arrow-down.svg" width="29" height="28"
+                  alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="accordion"><span class="faq__inner">Мы от всех скрываем диагноз нашего ребенка. Можно ли
+                обеспечить повышенный уровень конфиденциальности во время коррекции?</span><span
+                class="faq__square"><img class="faq__arrow" src="img/icons/arrow-down.svg" width="29" height="28"
+                  alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="accordion"><span class="faq__inner">Сколько времени нужно на прохождение коррекционной
+                программы?</span><span class="faq__square"><img class="faq__arrow" src="img/icons/arrow-down.svg"
+                  width="29" height="28" alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="accordion"><span class="faq__inner">У меня совсем нет времени на коррекционную
+                программу!</span><span class="faq__square"><img class="faq__arrow" src="img/icons/arrow-down.svg"
+                  width="29" height="28" alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+          <div class="faq__item faq__item--hidden">
+            <button class="accordion"><span class="faq__inner">Я слышал/а, что коррекция может быть стрессовой для
+                ребенка, так ли это? </span> <span class="faq__square"><img class="faq__arrow"
+                  src="img/icons/arrow-down.svg" width="29" height="28" alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+          <div class="faq__item faq__item--hidden">
+            <button class="accordion"><span class="faq__inner">У нас в семье есть режим и, возможно, я не смогу
+                участвовать во всех онлайн-встречах коррекционной программы. Как мне быть?</span> <span
+                class="faq__square"><img class="faq__arrow" src="img/icons/arrow-down.svg" width="29" height="28"
+                  alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+          <div class="faq__item faq__item--hidden">
+            <button class="accordion"><span class="faq__inner">Мы от всех скрываем диагноз нашего ребенка. Можно ли
+                обеспечить повышенный уровень конфиденциальности во время коррекции?</span><span
+                class="faq__square"><img class="faq__arrow" src="img/icons/arrow-down.svg" width="29" height="28"
+                  alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+          <div class="faq__item faq__item--hidden">
+            <button class="accordion"><span class="faq__inner">Сколько времени нужно на прохождение коррекционной
+                программы?</span><span class="faq__square"><img class="faq__arrow" src="img/icons/arrow-down.svg"
+                  width="29" height="28" alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+          <div class="faq__item faq__item--hidden">
+            <button class="accordion"><span class="faq__inner">У меня совсем нет времени на коррекционную
+                программу!</span><span class="faq__square"><img class="faq__arrow" src="img/icons/arrow-down.svg"
+                  width="29" height="28" alt="Развернуть"></span></button>
+            <div class="panel">
+              <p>Наша программа не вызывет стресса у детей и была использована при коррекции более 250 детей с РАС без
+                каких-либо инцидентов и жалоб со стороны родителей. Чтобы удостовериться в безопаности методики, вы
+                можете
+                посмотреть видео отрывки из знятий нашего Эксперта с ее подопечными выше, на этой страничке. <br>
+                Это авторская программа, которая включает в себя 3 методики. Денверская модель раннего вмешательства,
+                игротерапия, игры лицом к лицу.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="faq__align">
+        <button class="main-button" id="showAllBtn">
+          Показать больше
+          <span class="main-button__arrow">
+            <img class="main-button__icon" src="img/icons/arrow-down-second.svg" width="29" height="28" alt="Открыть">
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cert">
+    <div class="container">
+      <div class="swiper cert__slider">
+        <div class="cert__block swiper-wrapper">
+          <a class="cert__item swiper-slide" href="img/cert-1.jpg" data-fancybox="gallery-cert">
+            <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
+          </a>
+          <a class="cert__item swiper-slide" href="img/cert-1.jpg" data-fancybox="gallery-cert">
+            <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
+          </a>
+          <a class="cert__item swiper-slide" href="img/cert-1.jpg" data-fancybox="gallery-cert">
+            <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
+          </a>
+          <a class="cert__item swiper-slide" href="img/cert-1.jpg" data-fancybox="gallery-cert">
+            <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
+          </a>
+          <a class="cert__item swiper-slide" href="img/cert-1.jpg" data-fancybox="gallery-cert">
+            <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
+          </a>
+          <a class="cert__item swiper-slide" href="img/cert-1.jpg" data-fancybox="gallery-cert">
+            <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
+          </a>
+          <a class="cert__item swiper-slide" href="img/cert-1.jpg" data-fancybox="gallery-cert">
+            <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
+          </a>
+          <a class="cert__item swiper-slide" href="img/cert-1.jpg" data-fancybox="gallery-cert">
+            <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
+          </a>
+          <a class="cert__item swiper-slide" href="img/cert-1.jpg" data-fancybox="gallery-cert">
+            <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
+          </a>
+        </div>
+      </div>
+      <div class="cert__bottom">
+        <img class="cert__gerb" src="img/cert-gerb.png" width="197" height="185" loading="lazy" alt="Герб">
+        <div class="cert__wrapper">
+          <h2 class="cert__title">Государственная образовательная лицензия</h2>
+          <p class="cert__number">№ ЛО35-01218-23/00679151</p>
+          <a class="cert__link" href="#" target="_blank">Выписка из реестра лицензий</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a class="footer__phone" href="tel:+77777777777">
+          <span class="footer__number">+77777777777</span>
+          <span class="footer__get">свяжитесь с нами</span>
+        </a>
+        <div class="footer__messengers">
+          <div class="footer__messenger">
+            <a class="footer__mess" href="#" target="_blank">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_2021_181" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2" width="22"
+                  height="22">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.36599 23.109C2.34558 23.1824 2.3449 23.2599 2.36402 23.3337C2.38314 23.4075 2.42139 23.4749 2.47491 23.5292C2.52842 23.5835 2.59531 23.6227 2.66881 23.6429C2.74232 23.6631 2.81985 23.6635 2.89358 23.6441L7.88449 22.3398C9.46798 23.1975 11.2403 23.6469 13.0412 23.6474H13.0455C18.9887 23.6474 23.8333 18.8309 23.8333 12.9094C23.837 11.4973 23.5598 10.0986 23.0178 8.79467C22.4758 7.49073 21.68 6.3076 20.6765 5.31412C19.6747 4.31249 18.4848 3.5188 17.1752 2.9787C15.8656 2.43861 14.4621 2.16276 13.0455 2.16704C7.10233 2.16704 2.25766 6.98354 2.25766 12.904C2.25766 14.7879 2.75383 16.6382 3.69849 18.2708L2.36599 23.109ZM9.62649 7.76787C9.82474 7.77329 10.0447 7.78412 10.2537 8.24779C10.3924 8.55654 10.6253 9.12529 10.816 9.58896C10.9644 9.94971 11.0857 10.2465 11.1161 10.3072C11.1865 10.4459 11.2287 10.6051 11.1377 10.7925L11.1074 10.8554C11.0337 11.007 10.9817 11.1154 10.8582 11.2562L10.7033 11.4404C10.6112 11.553 10.5192 11.6635 10.4412 11.7415C10.3014 11.8802 10.1573 12.0297 10.3177 12.307C10.478 12.5844 11.0413 13.4965 11.8722 14.2321C12.48 14.7803 13.1773 15.22 13.9338 15.5321C14.0097 15.5646 14.071 15.5921 14.118 15.6145C14.3964 15.7531 14.5622 15.7315 14.7225 15.5451C14.8839 15.3577 15.4191 14.7337 15.6076 14.4564C15.7896 14.179 15.9759 14.2224 16.2337 14.3177C16.4916 14.4141 17.8631 15.0869 18.1415 15.2245L18.2964 15.3003C18.4903 15.3924 18.6214 15.4563 18.6777 15.5495C18.7471 15.6675 18.7471 16.2211 18.5174 16.8733C18.2812 17.5233 17.1448 18.1473 16.6302 18.195L16.484 18.2123C16.0117 18.2686 15.4137 18.3423 13.2817 17.5027C10.6535 16.4692 8.91908 13.906 8.56916 13.3871L8.51174 13.3048L8.50633 13.2961C8.34599 13.0827 7.36991 11.7773 7.36991 10.4296C7.36991 9.14046 8.00583 8.46879 8.29508 8.16329L8.34599 8.10913C8.43962 8.00336 8.55401 7.918 8.68205 7.85836C8.81009 7.79872 8.94904 7.76608 9.09024 7.76246C9.27766 7.76246 9.46616 7.76246 9.62649 7.76787Z"
+                    fill="white" />
+                </mask>
+                <g mask="url(#mask0_2021_181)">
+                  <path class="footer__fill footer__stroke" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.36599 23.109C2.34558 23.1824 2.3449 23.2599 2.36402 23.3337C2.38314 23.4075 2.42139 23.4749 2.47491 23.5292C2.52842 23.5835 2.59531 23.6227 2.66881 23.6429C2.74232 23.6631 2.81985 23.6635 2.89358 23.6441L7.88449 22.3398C9.46798 23.1975 11.2403 23.6469 13.0412 23.6474H13.0455C18.9887 23.6474 23.8333 18.8309 23.8333 12.9094C23.837 11.4973 23.5598 10.0986 23.0178 8.79467C22.4758 7.49073 21.68 6.3076 20.6765 5.31412C19.6747 4.31249 18.4848 3.5188 17.1752 2.9787C15.8656 2.43861 14.4621 2.16276 13.0455 2.16704C7.10233 2.16704 2.25766 6.98354 2.25766 12.904C2.25766 14.7879 2.75383 16.6382 3.69849 18.2708L2.36599 23.109ZM9.62649 7.76787C9.82474 7.77329 10.0447 7.78412 10.2537 8.24779C10.3924 8.55654 10.6253 9.12529 10.816 9.58896C10.9644 9.94971 11.0857 10.2465 11.1161 10.3072C11.1865 10.4459 11.2287 10.6051 11.1377 10.7925L11.1074 10.8554C11.0337 11.007 10.9817 11.1154 10.8582 11.2562L10.7033 11.4404C10.6112 11.553 10.5192 11.6635 10.4412 11.7415C10.3014 11.8802 10.1573 12.0297 10.3177 12.307C10.478 12.5844 11.0413 13.4965 11.8722 14.2321C12.48 14.7803 13.1773 15.22 13.9338 15.5321C14.0097 15.5646 14.071 15.5921 14.118 15.6145C14.3964 15.7531 14.5622 15.7315 14.7225 15.5451C14.8839 15.3577 15.4191 14.7337 15.6076 14.4564C15.7896 14.179 15.9759 14.2224 16.2337 14.3177C16.4916 14.4141 17.8631 15.0869 18.1415 15.2245L18.2964 15.3003C18.4903 15.3924 18.6214 15.4563 18.6777 15.5495C18.7471 15.6675 18.7471 16.2211 18.5174 16.8733C18.2812 17.5233 17.1448 18.1473 16.6302 18.195L16.484 18.2123C16.0117 18.2686 15.4137 18.3423 13.2817 17.5027C10.6535 16.4692 8.91908 13.906 8.56916 13.3871L8.51174 13.3048L8.50633 13.2961C8.34599 13.0827 7.36991 11.7773 7.36991 10.4296C7.36991 9.14046 8.00583 8.46879 8.29508 8.16329L8.34599 8.10913C8.43962 8.00336 8.55401 7.918 8.68205 7.85836C8.81009 7.79872 8.94904 7.76608 9.09024 7.76246C9.27766 7.76246 9.46616 7.76246 9.62649 7.76787Z"
+                    fill="#252525" stroke="#252525" stroke-width="2" stroke-linejoin="round" />
+                </g>
+              </svg>
+            </a>
+            <a class="footer__mess" href="https://t.me/aba_life_bot" target="_blank">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="footer__fill"
+                  d="M13 2.16699C7.01999 2.16699 2.16666 7.02033 2.16666 13.0003C2.16666 18.9803 7.01999 23.8337 13 23.8337C18.98 23.8337 23.8333 18.9803 23.8333 13.0003C23.8333 7.02033 18.98 2.16699 13 2.16699ZM18.0267 9.53366C17.8642 11.2453 17.16 15.4053 16.8025 17.3228C16.6508 18.1353 16.3475 18.4062 16.0658 18.4387C15.4375 18.4928 14.9608 18.027 14.3542 17.6262C13.4008 16.9978 12.8592 16.6078 11.9383 16.0012C10.8658 15.297 11.5592 14.907 12.1767 14.2787C12.3392 14.1162 15.1125 11.592 15.1667 11.3645C15.1742 11.33 15.1732 11.2943 15.1637 11.2603C15.1543 11.2263 15.1367 11.1951 15.1125 11.1695C15.0475 11.1153 14.9608 11.137 14.885 11.1478C14.7875 11.1695 13.2708 12.177 10.3133 14.1703C9.87999 14.4628 9.48999 14.6145 9.14332 14.6037C8.75332 14.5928 8.01666 14.387 7.46416 14.2028C6.78166 13.9862 6.25082 13.867 6.29416 13.4878C6.31582 13.2928 6.58666 13.0978 7.09582 12.892C10.2592 11.5162 12.3608 10.6062 13.4117 10.1728C16.4233 8.91616 17.0408 8.69949 17.4525 8.69949C17.5392 8.69949 17.745 8.72116 17.875 8.82949C17.9833 8.91616 18.0158 9.03533 18.0267 9.12199C18.0158 9.18699 18.0375 9.38199 18.0267 9.53366Z"
+                  fill="#252525" />
+              </svg>
+            </a>
+            <a class="footer__mess" href="#" target="_blank">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="footer__fill" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18.0657 2.8468C14.6573 2.08492 11.1228 2.08492 7.71441 2.8468L7.34716 2.92806C6.38817 3.14183 5.50732 3.61757 4.80269 4.30231C4.09807 4.98705 3.5973 5.85391 3.35616 6.80639C2.49371 10.211 2.49371 13.7769 3.35616 17.1815C3.58616 18.0898 4.0525 18.9211 4.70781 19.5909C5.36311 20.2607 6.18403 20.745 7.08716 20.9948L7.59091 24.0021C7.60699 24.0976 7.64838 24.1871 7.71076 24.2611C7.77315 24.3352 7.85425 24.3912 7.94562 24.4233C8.03699 24.4554 8.13529 24.4624 8.23029 24.4435C8.32528 24.4247 8.4135 24.3808 8.48574 24.3163L11.4443 21.6697C13.6652 21.8038 15.894 21.6262 18.0657 21.1421L18.434 21.0609C19.393 20.8471 20.2738 20.3714 20.9785 19.6866C21.6831 19.0019 22.1839 18.135 22.425 17.1826C23.2874 13.778 23.2874 10.2121 22.425 6.80747C22.1838 5.85485 21.6828 4.9879 20.978 4.30315C20.2732 3.6184 19.3921 3.14274 18.4329 2.92914L18.0657 2.8468ZM8.62874 6.71864C8.4274 6.68916 8.22203 6.72969 8.04699 6.83347H8.03183C7.62558 7.07181 7.25941 7.37189 6.94741 7.72506C6.68741 8.02514 6.54658 8.32847 6.50974 8.62097C6.48808 8.79431 6.50324 8.9698 6.55416 9.13555L6.57366 9.14639C6.86616 10.0055 7.24749 10.8321 7.71333 11.6099C8.31425 12.7022 9.05339 13.7126 9.91249 14.6161L9.93849 14.653L9.97966 14.6833L10.0046 14.7126L10.0349 14.7386C10.9416 15.6002 11.9544 16.3428 13.0487 16.9486C14.3 17.63 15.0594 17.9517 15.5155 18.0861V18.0926C15.6487 18.1337 15.7701 18.1521 15.8925 18.1521C16.2811 18.1243 16.649 17.9663 16.9368 17.7036C17.2889 17.3916 17.5868 17.0244 17.8187 16.616V16.6084C18.0364 16.1967 17.9627 15.8089 17.6486 15.5456C17.0181 14.9936 16.3356 14.5038 15.6108 14.0831C15.1255 13.8199 14.6326 13.9791 14.4332 14.2456L14.0075 14.783C13.7887 15.0495 13.3922 15.0126 13.3922 15.0126L13.3813 15.0191C10.4227 14.2641 9.63299 11.2686 9.63299 11.2686C9.63299 11.2686 9.59616 10.8613 9.87024 10.6533L10.4032 10.2243C10.6589 10.0163 10.8366 9.52447 10.5625 9.03914C10.1428 8.31485 9.6541 7.63279 9.10324 7.00247C8.98275 6.85446 8.814 6.7536 8.62658 6.71756M13.6272 5.41647C13.4836 5.41647 13.3458 5.47354 13.2442 5.57512C13.1426 5.6767 13.0856 5.81448 13.0856 5.95814C13.0856 6.1018 13.1426 6.23957 13.2442 6.34115C13.3458 6.44274 13.4836 6.4998 13.6272 6.4998C14.9977 6.4998 16.1352 6.94722 17.0354 7.80522C17.498 8.2743 17.8587 8.83006 18.0949 9.43889C18.3322 10.0488 18.4405 10.6999 18.4123 11.3521C18.4093 11.4232 18.4204 11.4942 18.4449 11.5611C18.4693 11.6279 18.5067 11.6893 18.5549 11.7417C18.6522 11.8476 18.7876 11.9104 18.9312 11.9165C19.0749 11.9225 19.2151 11.8712 19.3209 11.7739C19.4268 11.6766 19.4896 11.5412 19.4957 11.3976C19.528 10.5954 19.3949 9.7952 19.1046 9.04672C18.813 8.29444 18.3689 7.61061 17.8002 7.03822L17.7894 7.02739C16.6725 5.9603 15.2587 5.41647 13.6272 5.41647ZM13.5904 7.19747C13.4468 7.19747 13.309 7.25454 13.2074 7.35612C13.1058 7.4577 13.0487 7.59548 13.0487 7.73914C13.0487 7.8828 13.1058 8.02057 13.2074 8.12215C13.309 8.22374 13.4468 8.28081 13.5904 8.28081H13.6088C14.5968 8.35122 15.3162 8.68056 15.8199 9.22114C16.3367 9.77797 16.6042 10.4702 16.5837 11.3261C16.5804 11.4697 16.6343 11.6088 16.7335 11.7127C16.8327 11.8166 16.9692 11.8769 17.1129 11.8802C17.2565 11.8835 17.3956 11.8296 17.4995 11.7303C17.6035 11.6311 17.6637 11.4946 17.667 11.351C17.693 10.2276 17.3312 9.25797 16.614 8.48447V8.48231C15.8806 7.69581 14.8742 7.27981 13.663 7.19855L13.6446 7.19639L13.5904 7.19747ZM13.5698 9.01206C13.4973 9.00566 13.4243 9.01393 13.3551 9.03639C13.2859 9.05884 13.2219 9.09502 13.1669 9.14275C13.112 9.19048 13.0673 9.24879 13.0354 9.31419C13.0035 9.3796 12.9851 9.45077 12.9813 9.52344C12.9775 9.59611 12.9884 9.66881 13.0133 9.73717C13.0382 9.80554 13.0767 9.86819 13.1264 9.92137C13.176 9.97455 13.2359 10.0172 13.3024 10.0467C13.369 10.0762 13.4407 10.0921 13.5135 10.0932C13.9663 10.1171 14.2556 10.2536 14.4376 10.4366C14.6207 10.6208 14.7572 10.9166 14.7821 11.3791C14.7834 11.4518 14.7994 11.5235 14.829 11.5899C14.8587 11.6563 14.9014 11.716 14.9546 11.7656C15.0078 11.8151 15.0705 11.8534 15.1388 11.8782C15.2071 11.903 15.2798 11.9138 15.3524 11.91C15.425 11.9061 15.4961 11.8877 15.5614 11.8558C15.6267 11.8239 15.6849 11.7791 15.7326 11.7242C15.7803 11.6693 15.8164 11.6054 15.8389 11.5363C15.8613 11.4671 15.8696 11.3941 15.8632 11.3217C15.8286 10.6717 15.6249 10.0976 15.2078 9.67506C14.7886 9.25255 14.2177 9.04672 13.5698 9.01206Z"
+                  fill="#252525" />
+              </svg>
+            </a>
+          </div>
+          <p class="footer__write">напишите нам в мессенджер</p>
+        </div>
+        <a class="footer__email" href="mailto:info.aba.life@gmail.com">
+          <span class="footer__email-value">info.aba.life@gmail.com</span>
+          <span class="footer__email-label">напишите нам в мессенджер</span>
+        </a>
+        <div class="footer__right">
+          <div class="footer__socials">
+            <a class="footer__social" href="https://www.instagram.com/aba.life.ru?igsh=MXVucjk3cHIyN3h0Yg%3D%3"
+              target="_blank">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="footer__fill"
+                  d="M14.1136 2.16699C15.3324 2.17024 15.951 2.17674 16.485 2.19191L16.6952 2.19949C16.9379 2.20816 17.1773 2.21899 17.4665 2.23199C18.6192 2.28616 19.4057 2.46816 20.0958 2.73574C20.8108 3.01091 21.4131 3.38358 22.0155 3.98483C22.5665 4.5262 22.9928 5.18134 23.2645 5.90449C23.5321 6.59457 23.7141 7.38107 23.7683 8.53482C23.7813 8.82299 23.7921 9.06241 23.8008 9.30616L23.8073 9.51633C23.8235 10.0493 23.83 10.6679 23.8322 11.8867L23.8333 12.6948V14.114C23.8359 14.9042 23.8276 15.6944 23.8084 16.4843L23.8019 16.6945C23.7932 16.9382 23.7824 17.1777 23.7694 17.4658C23.7152 18.6196 23.531 19.405 23.2645 20.0962C22.9928 20.8193 22.5665 21.4744 22.0155 22.0158C21.4741 22.5669 20.819 22.9932 20.0958 23.2649C19.4057 23.5325 18.6192 23.7145 17.4665 23.7687L16.6952 23.8012L16.485 23.8077C15.951 23.8228 15.3324 23.8304 14.1136 23.8326L13.3055 23.8337H11.8874C11.0968 23.8364 10.3063 23.8281 9.51596 23.8087L9.3058 23.8022C9.04863 23.7925 8.79151 23.7813 8.53446 23.7687C7.3818 23.7145 6.5953 23.5325 5.90413 23.2649C5.18136 22.9931 4.52661 22.5668 3.98555 22.0158C3.43407 21.4746 3.00742 20.8194 2.73538 20.0962C2.4678 19.4061 2.2858 18.6196 2.23163 17.4658L2.19913 16.6945L2.19372 16.4843C2.17375 15.6944 2.16472 14.9042 2.16663 14.114V11.8867C2.16363 11.0965 2.17158 10.3063 2.19047 9.51633L2.19805 9.30616C2.20672 9.06241 2.21755 8.82299 2.23055 8.53482C2.28472 7.38107 2.46672 6.59566 2.7343 5.90449C3.00697 5.18104 3.43437 4.52588 3.98663 3.98483C4.52738 3.434 5.18175 3.00774 5.90413 2.73574C6.5953 2.46816 7.38071 2.28616 8.53446 2.23199C8.82263 2.21899 9.06313 2.20816 9.3058 2.19949L9.51596 2.19299C10.3059 2.17374 11.0961 2.16544 11.8863 2.16808L14.1136 2.16699ZM13 7.58366C11.5634 7.58366 10.1856 8.15434 9.1698 9.17016C8.15398 10.186 7.5833 11.5637 7.5833 13.0003C7.5833 14.4369 8.15398 15.8147 9.1698 16.8305C10.1856 17.8463 11.5634 18.417 13 18.417C14.4366 18.417 15.8143 17.8463 16.8301 16.8305C17.8459 15.8147 18.4166 14.4369 18.4166 13.0003C18.4166 11.5637 17.8459 10.186 16.8301 9.17016C15.8143 8.15434 14.4366 7.58366 13 7.58366ZM13 9.75033C13.4268 9.75025 13.8494 9.83425 14.2437 9.99751C14.6381 10.1608 14.9964 10.4001 15.2982 10.7018C15.6001 11.0036 15.8395 11.3618 16.0029 11.7561C16.1663 12.1504 16.2504 12.573 16.2505 12.9998C16.2506 13.4266 16.1666 13.8492 16.0033 14.2435C15.8401 14.6379 15.6007 14.9962 15.299 15.298C14.9972 15.5999 14.639 15.8393 14.2447 16.0027C13.8504 16.1661 13.4278 16.2503 13.001 16.2503C12.1391 16.2503 11.3124 15.9079 10.703 15.2984C10.0935 14.6889 9.75105 13.8623 9.75105 13.0003C9.75105 12.1384 10.0935 11.3117 10.703 10.7022C11.3124 10.0927 12.1391 9.75033 13.001 9.75033M18.6885 5.95866C18.3294 5.95866 17.985 6.10133 17.731 6.35528C17.4771 6.60924 17.3344 6.95368 17.3344 7.31283C17.3344 7.67197 17.4771 8.01641 17.731 8.27037C17.985 8.52432 18.3294 8.66699 18.6885 8.66699C19.0477 8.66699 19.3921 8.52432 19.6461 8.27037C19.9 8.01641 20.0427 7.67197 20.0427 7.31283C20.0427 6.95368 19.9 6.60924 19.6461 6.35528C19.3921 6.10133 19.0477 5.95866 18.6885 5.95866Z"
+                  fill="#252525" />
+              </svg>
+            </a>
+            <a class="footer__social" href="https://vk.com/aba.life" target="_blank">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="footer__fill"
+                  d="M4.97 4.97C3.5 6.454 3.5 8.827 3.5 13.58V14.42C3.5 19.166 3.5 21.539 4.97 23.03C6.454 24.5 8.827 24.5 13.58 24.5H14.42C19.166 24.5 21.539 24.5 23.03 23.03C24.5 21.546 24.5 19.173 24.5 14.42V13.58C24.5 8.834 24.5 6.461 23.03 4.97C21.546 3.5 19.173 3.5 14.42 3.5H13.58C8.834 3.5 6.461 3.5 4.97 4.97ZM7.042 9.891H9.45C9.527 13.895 11.291 15.589 12.691 15.939V9.891H14.952V13.342C16.331 13.195 17.787 11.62 18.277 9.884H20.531C20.3471 10.7826 19.9799 11.6336 19.4524 12.3839C18.9249 13.1343 18.2483 13.7678 17.465 14.245C18.3393 14.68 19.1115 15.2955 19.7305 16.0509C20.3495 16.8062 20.8013 17.6842 21.056 18.627H18.571C18.039 16.968 16.709 15.68 14.952 15.505V18.627H14.672C9.884 18.627 7.154 15.351 7.042 9.891Z"
+                  fill="#252525" />
+              </svg>
+            </a>
+            <a class="footer__social" href="https://dzen.ru/a/aMQ-W9EbUD3wW7oc" target="_blank">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="footer__fill"
+                  d="M22.5091 11.5137C22.511 11.5137 22.5125 11.5137 22.5144 11.5137C22.6483 11.5137 22.776 11.4575 22.8667 11.3591C22.9589 11.2593 23.0045 11.1253 22.9925 10.99C22.5105 5.68934 18.3139 1.49126 13.0128 1.00838C12.8784 0.997823 12.743 1.0415 12.6432 1.13414C12.5433 1.2263 12.4877 1.35638 12.4891 1.49222C12.5726 8.5367 13.5019 11.4153 22.5091 11.5137ZM22.5091 12.4871C13.5019 12.5855 12.5731 15.4641 12.4896 22.5085C12.4881 22.6444 12.5438 22.7745 12.6437 22.8666C12.7329 22.9487 12.8496 22.9943 12.9696 22.9943C12.984 22.9943 12.9989 22.9938 13.0133 22.9924C18.3144 22.5095 22.511 18.3119 22.9925 13.0108C23.0045 12.8754 22.9593 12.7415 22.8667 12.6417C22.7741 12.5418 22.6449 12.4924 22.5091 12.4871ZM10.955 1.01078C5.6707 1.50758 1.4875 5.7047 1.00798 10.9909C0.995983 11.1263 1.0411 11.2602 1.13374 11.3601C1.22446 11.4585 1.35262 11.5141 1.48606 11.5141C1.48798 11.5141 1.4899 11.5141 1.49182 11.5141C10.4693 11.4109 11.3961 8.53382 11.4806 1.49414C11.4821 1.3583 11.4259 1.22774 11.3261 1.13558C11.2253 1.04342 11.0904 0.998303 10.955 1.01078ZM1.49134 12.4866C1.34206 12.4698 1.22494 12.5409 1.13326 12.6407C1.0411 12.7405 0.995503 12.8745 1.0075 13.0098C1.48702 18.2961 5.6707 22.4932 10.955 22.99C10.9699 22.9914 10.9853 22.9919 11.0001 22.9919C11.1201 22.9919 11.2363 22.9468 11.3256 22.8647C11.4254 22.7725 11.4816 22.642 11.4801 22.5061C11.3957 15.4669 10.4693 12.5898 1.49134 12.4866Z"
+                  fill="#252525" />
+              </svg>
+            </a>
+            <a class="footer__social" href="https://t.me/abalifeofficial" target="_blank">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="footer__fill"
+                  d="M13 2.16699C7.01996 2.16699 2.16663 7.02033 2.16663 13.0003C2.16663 18.9803 7.01996 23.8337 13 23.8337C18.98 23.8337 23.8333 18.9803 23.8333 13.0003C23.8333 7.02033 18.98 2.16699 13 2.16699ZM18.0266 9.53366C17.8641 11.2453 17.16 15.4053 16.8025 17.3228C16.6508 18.1353 16.3475 18.4062 16.0658 18.4387C15.4375 18.4928 14.9608 18.027 14.3541 17.6262C13.4008 16.9978 12.8591 16.6078 11.9383 16.0012C10.8658 15.297 11.5591 14.907 12.1766 14.2787C12.3391 14.1162 15.1125 11.592 15.1666 11.3645C15.1741 11.33 15.1731 11.2943 15.1637 11.2603C15.1543 11.2263 15.1367 11.1951 15.1125 11.1695C15.0475 11.1153 14.9608 11.137 14.885 11.1478C14.7875 11.1695 13.2708 12.177 10.3133 14.1703C9.87996 14.4628 9.48996 14.6145 9.14329 14.6037C8.75329 14.5928 8.01663 14.387 7.46413 14.2028C6.78163 13.9862 6.25079 13.867 6.29413 13.4878C6.31579 13.2928 6.58663 13.0978 7.09579 12.892C10.2591 11.5162 12.3608 10.6062 13.4116 10.1728C16.4233 8.91616 17.0408 8.69949 17.4525 8.69949C17.5391 8.69949 17.745 8.72116 17.875 8.82949C17.9833 8.91616 18.0158 9.03533 18.0266 9.12199C18.0158 9.18699 18.0375 9.38199 18.0266 9.53366Z"
+                  fill="#252525" />
+              </svg>
+            </a>
+          </div>
+          <p class="footer__subscribe">подписывайтесь на нас</p>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <div class="footer__menu">
+          <div class="footer__column">
+            <h3 class="footer__caption">О нас</h3>
+            <nav class="footer__nav">
+              <a class="footer__link" href="#">О центре</a>
+              <a class="footer__link" href="#">Вопрос-ответ</a>
+              <a class="footer__link" href="#">Онлайн тест на рас</a>
+              <a class="footer__link" href="#">Отзывы</a>
+              <a class="footer__link" href="#">Ai-терапевт</a>
+            </nav>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__caption">Наши услуги</h3>
+            <nav class="footer__nav">
+              <a class="footer__link" href="#">Комплексная программа коррекции</a>
+              <a class="footer__link" href="#">Психологическая поддержка родителя</a>
+              <a class="footer__link" href="#">Диагностика ребенка базовая/расширенная</a>
+              <a class="footer__link" href="#">Консультации специалистов</a>
+              <a class="footer__link" href="#">Сопровождение в получении пособий</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer__third">
+        <a class="footer__logo" href="/">
+          <img class="footer__icon" src="img/footer-logo.png" width="42" height="44" alt="Логотип">
+          <span class="footer__name">aba.life</span>
+        </a>
+        <div class="footer__info">
+          <p class="footer__point">ООО «ВЕЛСИГРУПП»</p>
+          <p class="footer__point">ИНН 6732246701</p>
+          <p class="footer__point">214006, Россия, Смоленская обл., город Смоленск Г.О., Смоленск Г., Чкалова ул., д.
+            6А, офис М 5</p>
+          <p class="footer__point">р/с 40702810159000001782</p>
+          <p class="footer__point">Смоленское отделение N8609 ПАО Сбербанк</p>
+          <p class="footer__point"><a class="footer__doc" href="#">Политика</a>, <a class="footer__doc"
+              href="#">Положение</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Онлайн-центр коррекционной помощи "ABA.LIFE"</p>
+        <a class="footer__politic" href="#">Политика конфеденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-to-top">
+    <img class="scroll-to-top__icon" src="img/icons/arrow-top.svg" width="30" height="30" alt="Подняться вверх">
+  </button>
+
+  <script>
+    const closeNotion = document.querySelector('.header__close');
+    const header = document.querySelector('.header');
+    const notice = document.querySelector('.header__notice');
+
+
+    if (localStorage.getItem('noticeClosed') === 'true') {
+      header.classList.add('closed');
+    }
+
+    closeNotion.addEventListener('click', function () {
+      header.classList.add('closed');
+      localStorage.setItem('noticeClosed', 'true');
+    });
+  </script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/fancybox.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
