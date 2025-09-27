@@ -112,22 +112,52 @@
             <a class="header__link" href="./#test">Пройти тест</a>
           </nav>
           <a class="second-button second" href="#" target="_blank" data-modal="firstModal">Записаться</a>
+          <button class="header__burger">
+            <img src="img/icons/menu-burger.svg" width="24" height="24" alt="Открыть меню">
+          </button>
         </div>
       </div>
     </div>
   </header>
+  <div class="header-mobile">
+    <div class="header-mobile__bg"></div>
+    <div class="header-mobile__inner">
+      <button class="header-mobile__close">
+        <img src="img/icons/menu-close.svg" width="24" height="24" alt="Закрыть меню">
+      </button>
+      <nav class="header-mobile__nav">
+        <a class="header-mobile__link" href="./#why">Почему мы?</a>
+        <a class="header-mobile__link" href="./#program">Программа</a>
+        <a class="header-mobile__link" href="./reviews.html">Отзывы</a>
+        <a class="header-mobile__link" href="./#price">Цена</a>
+        <a class="header-mobile__link" href="./#test">Пройти тест</a>
+      </nav>
+    </div>
+  </div>
 
   <section class="hero">
     <div class="container">
       <div class="hero__global">
         <h1 class="hero__title">Не откладывайте будущее ребёнка на потом —начните создавать его сейчас</h1>
+        <h1 class="hero__title mobile">Центр коррекции РАС</h1>
         <p class="hero__subtitle">Для детей 3-8 лет: индивидуальная коррекция речи, поведения и адаптация к миру от
           онлайн центра коррекции ABA.LIFE с командой лучших ВСВА специалистов СНГ</p>
+        <div class="hero__info">
+          <p class="hero__ai">собственный ИИ для углубленной работы  с&nbsp;вашими протоколами</p>
+          <div class="hero__capsule">
+            <p class="hero__number">250 000</p>
+            <p class="hero__more">часов проведенных занятий</p>
+          </div>
+          <div class="hero__capsule second">
+            <p class="hero__number">1200</p>
+            <p class="hero__more">деток прошло через педагогов</p>
+          </div>
+        </div>
         <div class="hero__bottom">
           <form class="hero__form" action="/">
             <div class="hero__main">
-              <input class="hero__input" type="text" placeholder="Имя">
-              <input class="hero__input" type="text" placeholder="Номер телефона">
+              <input class="hero__input first" type="text" placeholder="Имя">
+              <input class="hero__input second" type="text" placeholder="Номер телефона">
               <button class="main-button" type="submit">
                 Бесплатная консультация
                 <span class="main-button__arrow">
@@ -164,7 +194,10 @@
   </section>
   <section class="video">
     <div class="container">
-      <video class="video__player" src="video/main-video.mp4" width="1276" height="671" loading="lazy" controls></video>
+      <div class="video__round">
+        <video class="video__player" src="video/main-video.mp4" width="1276" height="671"
+          controls></video>
+      </div>
     </div>
   </section>
   <div class="blue-first">
@@ -172,7 +205,7 @@
       <div class="container">
         <div class="steps__global">
           <div class="steps__left">
-            <h2 class="steps__title">Всего 4 шага к устойчивому прогрессу</h2>
+            <h2 class="steps__title">Всего 4 шага к&nbsp;устойчивому прогрессу</h2>
             <a class="main-button" href="#">
               Бесплатная консультация
               <span class="main-button__arrow">
@@ -200,6 +233,15 @@
               <p class="steps__text">Все занятия проходят онлайн по гибкому расписанию, удобному для вас, в
                 сопровождении наших профессиональных специалистов с постоянной поддержкой. </p>
             </div>
+          </div>
+          
+          <div class="steps__align">
+            <a class="main-button" href="#">
+              Бесплатная консультация
+              <span class="main-button__arrow">
+                <img class="main-button__icon" src="img/icons/arrow-right.svg" width="28" height="28" alt="Открыть">
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -291,6 +333,7 @@
         </li>
       </ul>
       <div class="program__blue">
+        <h3 class="program__mobtitle">1-е полугодие: «Формирование и&nbsp;развитие психических процессов, базовых навыков»</h3>
         <div class="program__tabs tabs">
           <a class="program__tab tab active" href="#">Модуль 1</a>
           <a class="program__tab tab" href="#">Модуль 2</a>
@@ -392,6 +435,7 @@
             общения, игры и занимательного обучения.</p>
         </div>
         <img class="program__right" src="img/program-image.jpg" width="648" height="202" loading="lazy" alt="Картинка">
+        <img class="program__right mobile" src="img/program-image-mobile.jpg" width="343" height="163" loading="lazy" alt="Картинка">
       </div>
     </div>
   </section>
@@ -499,6 +543,7 @@
       </p>
       <div class="never__main">
         <img class="never__image" src="img/never-image.jpg" width="1061" height="670" loading="lazy" alt="Картинка">
+        <img class="never__image mobile" src="img/never-image-mobile.jpg" width="343" height="312" loading="lazy" alt="Картинка">
         <div class="never__cursor">
           <img class="never__arrow" src="img/icons/never-arrow.svg" width="89" height="114" alt="Направление">
           <span class="never__label">Используйте бесплатно!</span>
@@ -525,8 +570,8 @@
       <div class="consultation__block">
         <form class="hero__form" action="/">
           <div class="hero__main">
-            <input class="hero__input" type="text" placeholder="Имя">
-            <input class="hero__input" type="text" placeholder="Номер телефона">
+            <input class="hero__input first" type="text" placeholder="Имя">
+            <input class="hero__input second" type="text" placeholder="Номер телефона">
             <button class="main-button" type="submit">
               Бесплатная консультация
               <span class="main-button__arrow">
@@ -546,7 +591,7 @@
     <div class="container">
       <div class="experts__top">
         <h2 class="experts__title">Вашу программу курируют сильнейшие эксперты СНГ в области РАС</h2>
-        <div class="slider-arrows">
+        <div class="slider-arrows experts__arrows">
           <button class="slider-arrow prev">
             <img class="experts__icon" src="img/icons/arrow-left.svg" width="29" height="28" alt="Пред">
           </button>
@@ -626,6 +671,22 @@
             </a>
           </div>
         </div>
+        <div class="combined-pagination experts__combined">
+              <div class="slider-arrows experts__arrows mobile">
+                <button class="slider-arrow prev swiper-button-disabled" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-69f6738486f9e9105" aria-disabled="true">
+                  <img class="slider-arrow__icon" src="img/icons/arrow-left.svg" width="29" height="28" alt="Пред">
+                </button>
+                <button class="slider-arrow next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-69f6738486f9e9105" aria-disabled="false">
+                  <img class="slider-arrow__icon" src="img/icons/arrow-right.svg" width="29" height="28" alt="След">
+                </button>
+              </div>
+              <div class="fraction-pagination">
+                <span class="current-slide" id="currentSlide2">1</span> / <span id="totalSlides2">5</span>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" id="progressBar2" style="width: 20%;"></div>
+              </div>
+            </div>
       </div>
     </div>
   </section>
@@ -974,7 +1035,9 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination testing__pagination"></div>
+            <div class="testing__overflow">
+              <div class="swiper-pagination testing__pagination"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -1184,6 +1247,14 @@
             <img class="cert__image" src="img/cert-1.jpg" width="413" height="292" loading="lazy" alt="Сертификат">
           </a>
         </div>
+        <div class="slider-arrows cert__arrows">
+                <button class="slider-arrow prev swiper-button-disabled" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-69f6738486f9e9105" aria-disabled="true">
+                  <img class="slider-arrow__icon" src="img/icons/arrow-left.svg" width="29" height="28" alt="Пред">
+                </button>
+                <button class="slider-arrow next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-69f6738486f9e9105" aria-disabled="false">
+                  <img class="slider-arrow__icon" src="img/icons/arrow-right.svg" width="29" height="28" alt="След">
+                </button>
+              </div>
       </div>
       <div class="cert__bottom">
         <img class="cert__gerb" src="img/cert-gerb.png" width="197" height="185" loading="lazy" alt="Герб">
@@ -1204,7 +1275,7 @@
         </a>
         <div class="footer__messengers">
           <div class="footer__messenger">
-            <a class="footer__mess" href="#" target="_blank">
+            <a class="footer__mess" href="http://wa.me/79938914012" target="_blank">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_2021_181" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2" width="22"
                   height="22">
@@ -1242,7 +1313,7 @@
         </a>
         <div class="footer__right">
           <div class="footer__socials">
-            <a class="footer__social" href="https://www.instagram.com/aba.life.ru?igsh=MXVucjk3cHIyN3h0Yg%3D%3"
+            <a class="footer__social" href="https://www.instagram.com/aba.life.ru"
               target="_blank">
               <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="footer__fill"
@@ -1278,7 +1349,7 @@
       <div class="footer__middle">
         <div class="footer__menu">
           <div class="footer__column">
-            <h3 class="footer__caption">О нас</h3>
+            <h3 class="footer__caption"><span class="footer__cappo">О нас</span><img class="footer__dropdown" src="img/icons/dropdown.svg" width="24" height="24" alt="Развернуть меню"></h3>
             <nav class="footer__nav">
               <a class="footer__link" href="#">О центре</a>
               <a class="footer__link" href="#">Вопрос-ответ</a>
@@ -1288,7 +1359,7 @@
             </nav>
           </div>
           <div class="footer__column">
-            <h3 class="footer__caption">Наши услуги</h3>
+            <h3 class="footer__caption"><span class="footer__cappo">Наши услуги</span><img class="footer__dropdown" src="img/icons/dropdown.svg" width="24" height="24" alt="Развернуть меню"></h3>
             <nav class="footer__nav">
               <a class="footer__link" href="#">Комплексная программа коррекции</a>
               <a class="footer__link" href="#">Психологическая поддержка родителя</a>
@@ -1301,7 +1372,7 @@
       </div>
       <div class="footer__third">
         <a class="footer__logo" href="/">
-          <img class="footer__icon" src="img/footer-logo.png" width="42" height="44" alt="Логотип">
+          <img class="footer__icon" src="img/logo.png" width="42" height="44" alt="Логотип">
           <span class="footer__name">aba.life</span>
         </a>
         <div class="footer__info">

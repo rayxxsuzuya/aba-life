@@ -17,7 +17,49 @@ scrollToTop.addEventListener('click', () => {
   });
 });
 
+const navLinks = document.querySelectorAll('.header-mobile .header-mobile__link');
 
+navLinks.forEach(el => {
+  el.addEventListener('click', function() {
+    headerMobile.classList.remove('active');
+  document.body.style.overflow = 'visible';
+  })
+})
+
+if (document.querySelector('.consultation .main-button')) {
+  const mainElement = document.querySelector('.consultation .main-button');
+  const labelElement = document.querySelector('.consultation .hero__label');
+
+  if (labelElement && mainElement && window.innerWidth <= 600) {
+    mainElement.insertAdjacentElement('beforebegin', labelElement);
+  }
+
+  window.addEventListener('resize', function () {
+    if (labelElement && mainElement && window.innerWidth <= 600) {
+      mainElement.insertAdjacentElement('beforebegin', labelElement);
+    }
+  });
+}
+
+const headerBurger = document.querySelector('.header__burger');
+const headerMobile = document.querySelector('.header-mobile');
+const headerMobileBg = document.querySelector('.header-mobile__bg');
+const headerMobileClose = document.querySelector('.header-mobile__close');
+
+headerBurger.addEventListener('click', () => {
+  headerBurger.classList.toggle('active');
+  headerMobile.classList.toggle('active');
+});
+
+headerMobileBg.addEventListener('click', () => {
+  headerBurger.classList.remove('active');
+  headerMobile.classList.remove('active');
+})
+
+headerMobileClose.addEventListener('click', () => {
+  headerBurger.classList.remove('active');
+  headerMobile.classList.remove('active');
+})
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
@@ -54,18 +96,68 @@ const expertsSlider = new Swiper('.experts__slider', {
     nextEl: '.experts .slider-arrow.next',
     prevEl: '.experts .slider-arrow.prev',
   },
+  on: {
+    slideChange: function () {
+      updateProgress2(this);
+    }
+  },
+
+  breakpoints: {
+    935: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+
+    600: {
+      slidesPerView: 2,
+    },
+    1: {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.experts .experts__arrows.mobile .slider-arrow.next',
+        prevEl: '.experts .experts__arrows.mobile .slider-arrow.prev',
+      },
+    }
+  }
 
 });
 
 const teachersSlider = new Swiper('.teachers__slider', {
   loop: false,
-  slidesPerView: 3,
-  slidesPerGroup: 3,
+  slidesPerView: 1, 
+  slidesPerGroup: 1,
   spaceBetween: 20,
+  
   grid: {
-    rows: 2,
-    fill: 'row',
+    rows: 3,
+    fill: 'row', 
   },
+
+  breakpoints: {
+    900: {
+      slidesPerView: 3, 
+      slidesPerGroup: 3,
+      grid: {
+        rows: 1, 
+      },
+    },
+    600: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      grid: {
+        rows: 1,
+      },
+    },
+    1: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 16,
+      grid: {
+        rows: 3, 
+      },
+    },
+  },
+
 
   pagination: {
     el: '.teachers .slider-pagination',
@@ -89,7 +181,7 @@ if (document.querySelector('#showAllBtn')) {
 
     showAllBtn.addEventListener('click', () => {
       hiddenItems.forEach(item => item.classList.remove('faq__item--hidden'));
-      showAllBtn.style.display = 'none'; 
+      showAllBtn.style.display = 'none';
     });
   });
 }
@@ -102,6 +194,25 @@ const reviewsPageSlider = new Swiper('.reviews-page__slider', {
   grid: {
     rows: 2,
     fill: 'row',
+  },
+  breakpoints: {
+    900: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    600: {
+      slidesPerView: 2,
+      slidesPerGroup: 3,
+    },
+    1: {
+      slidesPerView: 1,
+      slidesPerGroup: 3,
+      spaceBetween: 16,
+      grid: {
+    rows: 3,
+    fill: 'row',
+  },
+    }
   },
 
   pagination: {
@@ -194,6 +305,56 @@ if (document.querySelector('#openTest')) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  let certSlider = null;
+
+  function initCertSlider() {
+    const container = document.querySelector('.cert__slider');
+    if (!container) return; 
+
+    if (window.innerWidth <= 600) {
+      if (!certSlider) {
+        certSlider = new Swiper('.cert__slider', {
+          slidesPerView: 1,
+          loop: false,
+          navigation: {
+            nextEl: '.cert__slider .slider-arrow.next',
+            prevEl: '.cert__slider .slider-arrow.prev',
+          },
+        });
+      }
+    } else {
+      if (certSlider) {
+        certSlider.destroy(true, true);
+        certSlider = null;
+      }
+    }
+  }
+
+  initCertSlider();
+
+  window.addEventListener('resize', () => {
+    initCertSlider();
+  });
+});
+
+if (window.innerWidth <= 600) {
+  document.addEventListener('DOMContentLoaded', () => {
+  // Выбираем все заголовки caption внутри колонок
+  const captions = document.querySelectorAll('.footer__column .footer__caption');
+
+  captions.forEach(caption => {
+    caption.addEventListener('click', () => {
+      // Находим ближайший родительский элемент .footer__column
+      const column = caption.closest('.footer__column');
+      
+      // Переключаем класс active у этого элемента
+      column.classList.toggle('active');
+    });
+  });
+});
+}
+
 const reviewsSlider = new Swiper('.reviews__slider', {
   slidesPerView: 2,
   spaceBetween: 20,
@@ -201,6 +362,14 @@ const reviewsSlider = new Swiper('.reviews__slider', {
   navigation: {
     nextEl: '.reviews__slider .slider-arrow.next',
     prevEl: '.reviews__slider .slider-arrow.prev',
+  },
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+    },
+    1: {
+      slidesPerView: 1,
+    }
   },
   on: {
     slideChange: function () {
@@ -224,10 +393,39 @@ if (document.getElementById('progressBar')) {
     document.getElementById('progressBar').style.width = progress + '%';
     document.getElementById('currentSlide').textContent = currentPosition;
     document.getElementById('totalSlides').textContent = maxPosition;
+
+    if (document.getElementById('progressBar')) {
+document.getElementById('progressBar').style.width = progress + '%';
+    document.getElementById('currentSlide').textContent = currentPosition;
+    document.getElementById('totalSlides').textContent = maxPosition;
+  }
   }
 
   updateProgress(reviewsSlider);
 }
+
+
+function updateProgress2(swiperInstance2) {
+  const activeIndex2 = swiperInstance2.activeIndex;
+  const slidesPerView2 = swiperInstance2.params.slidesPerView;
+  const totalSlides2 = swiperInstance2.slides.length;
+
+  const maxIndex2 = totalSlides2 - slidesPerView2;
+  const currentPosition2 = activeIndex2 + 1;
+  const maxPosition2 = maxIndex2 + 1;
+
+  const progress2 = (currentPosition2 / maxPosition2) * 100;
+
+  if (document.getElementById('progressBar2')) {
+document.getElementById('progressBar2').style.width = progress2 + '%';
+  document.getElementById('currentSlide2').textContent = currentPosition2;
+  document.getElementById('totalSlides2').textContent = maxPosition2;
+  }
+
+  
+}
+
+updateProgress2(expertsSlider);
 
 var acc = document.getElementsByClassName("accordion");
 for (let i = 0; i < acc.length; i++) {
