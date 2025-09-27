@@ -93,8 +93,8 @@ const expertsSlider = new Swiper('.experts__slider', {
 
 
   navigation: {
-    nextEl: '.experts .slider-arrow.next',
-    prevEl: '.experts .slider-arrow.prev',
+    nextEl: '.experts .experts__arrows:not(.mobile) .slider-arrow.next',
+    prevEl: '.experts .experts__arrows:not(.mobile) .slider-arrow.prev',
   },
   on: {
     slideChange: function () {
