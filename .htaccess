@@ -1,0 +1,20 @@
+# Для кеширования статических ресурсов (изображений, CSS, JS)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Устанавливаем срок кеширования на 1 год (365 дней)
+  ExpiresDefault "access plus 1 year"
+
+  # Можно настроить отдельно для типов файлов:
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+# Также рекомендуется включить кеширование через Cache-Control
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|gif|css|js)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+</IfModule>
