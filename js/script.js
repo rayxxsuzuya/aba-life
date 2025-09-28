@@ -20,11 +20,29 @@ scrollToTop.addEventListener('click', () => {
 const navLinks = document.querySelectorAll('.header-mobile .header-mobile__link');
 
 navLinks.forEach(el => {
-  el.addEventListener('click', function() {
+  el.addEventListener('click', function () {
     headerMobile.classList.remove('active');
-  document.body.style.overflow = 'visible';
+    document.body.style.overflow = 'visible';
   })
 })
+
+
+if (window.innerWidth <= 600) {
+  document.addEventListener('DOMContentLoaded', () => {
+    // Выбираем все заголовки caption внутри колонок
+    const captions = document.querySelectorAll('.footer__column .footer__caption');
+
+    captions.forEach(caption => {
+      caption.addEventListener('click', () => {
+        // Находим ближайший родительский элемент .footer__column
+        const column = caption.closest('.footer__column');
+
+        // Переключаем класс active у этого элемента
+        column.classList.toggle('active');
+      });
+    });
+  });
+}
 
 if (document.querySelector('.consultation .main-button')) {
   const mainElement = document.querySelector('.consultation .main-button');
@@ -86,6 +104,13 @@ for (let x = 0; x < tabs.length; x++) {
   }
 }
 
+const closeNotion = document.querySelector('.header__close');
+const header = document.querySelector('.header');
+
+closeNotion.addEventListener('click', function () {
+  header.classList.add('closed');
+});
+
 const expertsSlider = new Swiper('.experts__slider', {
   loop: true,
   slidesPerView: 3,
@@ -124,21 +149,21 @@ const expertsSlider = new Swiper('.experts__slider', {
 
 const teachersSlider = new Swiper('.teachers__slider', {
   loop: false,
-  slidesPerView: 1, 
+  slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 20,
-  
+
   grid: {
     rows: 3,
-    fill: 'row', 
+    fill: 'row',
   },
 
   breakpoints: {
     900: {
-      slidesPerView: 3, 
+      slidesPerView: 3,
       slidesPerGroup: 3,
       grid: {
-        rows: 1, 
+        rows: 2,
       },
     },
     600: {
@@ -153,7 +178,7 @@ const teachersSlider = new Swiper('.teachers__slider', {
       slidesPerGroup: 1,
       spaceBetween: 16,
       grid: {
-        rows: 3, 
+        rows: 3,
       },
     },
   },
@@ -209,9 +234,9 @@ const reviewsPageSlider = new Swiper('.reviews-page__slider', {
       slidesPerGroup: 3,
       spaceBetween: 16,
       grid: {
-    rows: 3,
-    fill: 'row',
-  },
+        rows: 3,
+        fill: 'row',
+      },
     }
   },
 
@@ -238,7 +263,23 @@ if (document.querySelector('#openTest')) {
 
   openTest.addEventListener('click', () => {
     testStart.style.display = 'none';
-    testing.style.display = 'block';
+
+    const testingHeight = testing.scrollHeight + 'px';
+
+    testing.style.maxHeight = testingHeight;
+
+    testing.classList.add('open');
+
+    testing.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+    setTimeout(() => {
+      window.scrollBy({
+        top: -50,
+        behavior: 'smooth'
+      });
+    }, 600);
   });
 
   const nowSpan = document.querySelector('.testing__counter .testing__now');
@@ -310,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initCertSlider() {
     const container = document.querySelector('.cert__slider');
-    if (!container) return; 
+    if (!container) return;
 
     if (window.innerWidth <= 600) {
       if (!certSlider) {
@@ -338,22 +379,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-if (window.innerWidth <= 600) {
-  document.addEventListener('DOMContentLoaded', () => {
-  // Выбираем все заголовки caption внутри колонок
-  const captions = document.querySelectorAll('.footer__column .footer__caption');
-
-  captions.forEach(caption => {
-    caption.addEventListener('click', () => {
-      // Находим ближайший родительский элемент .footer__column
-      const column = caption.closest('.footer__column');
-      
-      // Переключаем класс active у этого элемента
-      column.classList.toggle('active');
-    });
-  });
-});
-}
 
 const reviewsSlider = new Swiper('.reviews__slider', {
   slidesPerView: 2,
@@ -395,10 +420,10 @@ if (document.getElementById('progressBar')) {
     document.getElementById('totalSlides').textContent = maxPosition;
 
     if (document.getElementById('progressBar')) {
-document.getElementById('progressBar').style.width = progress + '%';
-    document.getElementById('currentSlide').textContent = currentPosition;
-    document.getElementById('totalSlides').textContent = maxPosition;
-  }
+      document.getElementById('progressBar').style.width = progress + '%';
+      document.getElementById('currentSlide').textContent = currentPosition;
+      document.getElementById('totalSlides').textContent = maxPosition;
+    }
   }
 
   updateProgress(reviewsSlider);
@@ -417,12 +442,12 @@ function updateProgress2(swiperInstance2) {
   const progress2 = (currentPosition2 / maxPosition2) * 100;
 
   if (document.getElementById('progressBar2')) {
-document.getElementById('progressBar2').style.width = progress2 + '%';
-  document.getElementById('currentSlide2').textContent = currentPosition2;
-  document.getElementById('totalSlides2').textContent = maxPosition2;
+    document.getElementById('progressBar2').style.width = progress2 + '%';
+    document.getElementById('currentSlide2').textContent = currentPosition2;
+    document.getElementById('totalSlides2').textContent = maxPosition2;
   }
 
-  
+
 }
 
 updateProgress2(expertsSlider);
@@ -483,3 +508,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+if (document.querySelector('.hero__clouds')) {
+  let lastScrollY = window.scrollY;
+  let offsetY = 0;
+  const maxOffset = 80;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    const deltaY = currentScrollY - lastScrollY;
+
+    if (deltaY > 0) {
+      offsetY = Math.max(offsetY - 1, -maxOffset);
+    } else if (deltaY < 0) {
+      offsetY = Math.min(offsetY + 1, maxOffset);
+    }
+
+    document.querySelector('.hero__clouds').style.transform = `translateY(${offsetY}px)`;
+
+    lastScrollY = currentScrollY;
+  });
+}
