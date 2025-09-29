@@ -1,3 +1,12 @@
+window.addEventListener('load', () => {
+  const preloader = document.querySelector('.preloader');
+  preloader.classList.add('hidden');
+
+  preloader.addEventListener('transitionend', () => {
+    preloader.style.display = 'none';
+  });
+});
+
 Fancybox.bind("[data-fancybox]", {});
 
 const scrollToTop = document.querySelector('.scroll-to-top');
@@ -29,15 +38,12 @@ navLinks.forEach(el => {
 
 if (window.innerWidth <= 600) {
   document.addEventListener('DOMContentLoaded', () => {
-    // Выбираем все заголовки caption внутри колонок
     const captions = document.querySelectorAll('.footer__column .footer__caption');
 
     captions.forEach(caption => {
       caption.addEventListener('click', () => {
-        // Находим ближайший родительский элемент .footer__column
         const column = caption.closest('.footer__column');
 
-        // Переключаем класс active у этого элемента
         column.classList.toggle('active');
       });
     });
