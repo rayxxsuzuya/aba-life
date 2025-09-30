@@ -7,6 +7,42 @@ window.addEventListener('load', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const helpSection = document.querySelector('.help');
+  const image = helpSection ? helpSection.querySelector('.help__image') : null;
+
+  if (image && 'IntersectionObserver' in window) {
+    image.style.opacity = 0;
+    image.style.transition = 'opacity 0.2s ease';
+
+    const screenWidth = window.innerWidth;
+    const rootMarginValue = screenWidth <= 600 ? '-350px' : '0px 0px -300px 0px';
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!image.src) {
+            image.src = image.dataset.src;
+          }
+          image.style.opacity = 1;
+          
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: rootMarginValue,
+      threshold: 0
+    });
+
+    observer.observe(helpSection);
+  } else {
+    if (image && image.dataset.src) {
+      image.src = image.dataset.src;
+      image.style.opacity = 1; 
+    }
+  }
+});
+
 Fancybox.bind("[data-fancybox]", {});
 
 const scrollToTop = document.querySelector('.scroll-to-top');
