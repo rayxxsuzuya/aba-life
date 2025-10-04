@@ -86,6 +86,7 @@ html {
   right: 0;
   width: 100%;
   z-index: 30;
+  background-color: #fff;
   min-height: 215px;
 }
 
@@ -2124,6 +2125,7 @@ body:has(.header.fixed) {
   right: 0;
   width: 100%;
   z-index: 30;
+  background: none;
 }
 
 .header .second-button.second {
@@ -2194,6 +2196,10 @@ body:has(.header.fixed) {
 .second-button,
 .header__link {
   transition: all 0.3s ease;
+}
+
+.header {
+  transition: none !important;
 }
 
 .modal {
