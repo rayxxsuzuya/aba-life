@@ -16,6 +16,7 @@ body {
   min-width: 360px;
   background: #fff;
   color: #252525;
+  padding-top: 215px;
   font-family: var(--main-font);
 }
 
@@ -79,6 +80,13 @@ html {
 
 .header {
   padding: 10px 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 30;
+  min-height: 215px;
 }
 
 .header * {}
@@ -2103,7 +2111,8 @@ body:has(.preloader:not(.hidden)) {
 
 body:has(.header.closed),
 body:has(.header.fixed) {
-  padding-top: 215px;
+  /* padding-top: 215px; */
+  /* transition: 0.5s ease; */
 }
 
 .header.closed,
@@ -2184,7 +2193,7 @@ body:has(.header.fixed) {
 .header__nav,
 .second-button,
 .header__link {
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 
 .modal {
@@ -2661,6 +2670,10 @@ body:has(.header.fixed) {
   .header__logo {
     margin: 0;
   }
+
+  body {
+    padding-top: 318px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -2695,6 +2708,10 @@ body:has(.header.fixed) {
 
   .header.fixed .header__nav {
     margin: 0;
+  }
+
+  body {
+    padding-top: 376px;
   }
 }
 
@@ -2779,12 +2796,17 @@ body:has(.header.fixed) {
 
   .footer__third {
     gap: 50px;
+  } 
+
+  body {
+    padding-top: 404px;
   }
 }
 
 @media (max-width: 600px) {
   .header {
     padding: 8px 0;
+    min-height: 128px;
   }
 
   .price__block {
@@ -3945,8 +3967,7 @@ body:has(.header.fixed) {
     border-radius: 0 0 14px 14px;
   }
 
-  body:has(.header.closed),
-  body:has(.header.fixed) {
+  body {
     padding-top: 128px;
   }
 
