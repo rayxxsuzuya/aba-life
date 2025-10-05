@@ -7,6 +7,49 @@ window.addEventListener('load', () => {
   });
 });
 
+
+
+if (document.querySelector('.phone')) {
+  var phoneInputs = document.querySelectorAll('.phone');
+
+  phoneInputs.forEach(phoneInput => {
+    phoneInput.onfocus = function (e) {
+      e.target.setAttribute('placeholder', '+7 (111) 111-11-11');
+    };
+
+    phoneInput.addEventListener('focusout', function (e) {
+      e.target.setAttribute('placeholder', '');
+    });
+    phoneInput.addEventListener('keydown', function (event) {
+      if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
+        event.preventDefault();
+      }
+
+      var mask = '+7 (111) 111-11-11'; 
+
+      if (/[0-9\+\ \-\(\)]/.test(event.key)) {
+        var currentString = this.value;
+        var currentLength = currentString.length;
+
+        if (/[0-9]/.test(event.key)) {
+          if (mask[currentLength] == '1') {
+            this.value = currentString + event.key;
+          } else {
+            for (var i = currentLength; i < mask.length; i++) {
+              if (mask[i] == '1') {
+                this.value = currentString + event.key;
+                break;
+              }
+
+              currentString += mask[i];
+            }
+          }
+        }
+      }
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const helpSection = document.querySelector('.help');
   const image = helpSection ? helpSection.querySelector('.help__image') : null;
@@ -548,6 +591,30 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModal(modal);
       }
     });
+  });
+});
+
+document.querySelectorAll('.hero__form').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    let hasError = false;
+    const inputs = form.querySelectorAll('.hero__input');
+
+    inputs.forEach(input => {
+      if (input.value.trim() === '') {
+        input.classList.add('error');
+        hasError = true;
+      } else {
+        input.classList.remove('error');
+      }
+    });
+
+    if (hasError) {
+      e.preventDefault();
+    } else {
+      e.preventDefault();
+        document.querySelector('#successModal').closest('.modal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
   });
 });
 

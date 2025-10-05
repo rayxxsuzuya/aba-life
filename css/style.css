@@ -20,6 +20,10 @@ body {
   font-family: var(--main-font);
 }
 
+body:has(.header.closed) {
+  padding-top: 68px;
+}
+
 main {
   overflow: hidden;
 }
@@ -2126,6 +2130,7 @@ body:has(.header.fixed) {
   width: 100%;
   z-index: 30;
   background: none;
+  min-height: 215px;
 }
 
 .header .second-button.second {
@@ -2680,6 +2685,18 @@ body:has(.header.fixed) {
   body {
     padding-top: 318px;
   }
+
+  body:has(.header.closed) {
+    padding-top: 68px;
+  }
+
+  body:has(.header.fixed) {
+    padding-top: 68px;
+  }
+
+  .header.closed, .header.fixed {
+    min-height: 68px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -2718,6 +2735,18 @@ body:has(.header.fixed) {
 
   body {
     padding-top: 376px;
+  }
+
+  body:has(.header.closed) {
+    padding-top: 180px;
+  }
+
+  body:has(.header.fixed) {
+    padding-top: 180px;
+  }
+
+  .header.closed .header__nav, .header.fixed .header__nav {
+    margin: 0 auto;
   }
 }
 
@@ -3977,9 +4006,21 @@ body:has(.header.fixed) {
     padding-top: 128px;
   }
 
+  body:has(.header.closed) {
+    padding-top: 44px;
+  }
+
+  body:has(.header.fixed) {
+    padding-top: 44px;
+  }
+
   .help__inner {
     padding-left: 0;
     padding-top: 93px;
+  }
+
+  .header.closed, .header.fixed {
+    min-height: 44px;
   }
 
   .preloader__image {
